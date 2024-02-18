@@ -1,0 +1,64 @@
+:root{
+  --dark-blue: #003572; 
+  --light-blue :#56c1ca;
+  --dark-brown: #231C24;
+  --dark-gray: #324E54;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    background-color: #f3f3f3;
+}
+.collapse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.navbar li a {
+    color: var(--dark-blue);
+}
+.nav-link:focus{
+    color: var(--light-blue);
+}
+
+/* Section - Hoteis e Resorts ----*/
+
+.titulo-hoteis{
+    color:  var(--dark-blue);
+}
+.gradient-text{
+    font-size: 34px;
+    background: linear-gradient(45deg, rgb(6, 6, 155), red, #3458f7, blue, red);
+    --webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    background-color: #70fda6;
+    border-radius: 50%;
+    padding: 5px;
+    right: 20px;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.whatsapp-button:hover{
+    padding: 8px;
+    transition: ease-in-out 0.2s;
+}
+.whatsapp-button img {
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%;     
+    transition: transform 0.3s ease-in-out;
+}

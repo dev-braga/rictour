@@ -1,0 +1,54 @@
+.swiper-container{
+    overflow: hidden;
+}
+
+
+.container-banner {
+    width: 100%;
+    height: max-content;
+}
+.swiper-pagination{
+    position: absolute;
+    bottom: unset !important;
+    top: 21rem;
+}
+.slide-banner img{
+    width: 100%;
+}
+.conteudo-slide{
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+.bt{
+    padding: .5rem 2.3rem;
+}
+
+.container-hoteis{
+    width: 100%;
+    height: 465px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
