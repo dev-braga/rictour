@@ -45,9 +45,14 @@ h1{
     color:  var(--dark);
     letter-spacing: -2px;
 }
-
+.apresentacao{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
 .gradient-text{
-    font-size: 34px;
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -0.043em;
     background: linear-gradient(45deg, rgb(40, 80, 165), rgb(204, 41, 41), #3458f7, rgb(59, 103, 226), rgb(255, 0, 43));
     --webkit-background-clip: text;
     background-clip: text;
