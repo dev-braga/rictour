@@ -57,18 +57,19 @@ var swiperHotel = new Swiper('.swiper-servicos', {
     slidesPerView: 'auto',
     spaceBetween: 30,
     breakpoints:{
+        469:{
+            slidesPerView: 2
+        },
         640:{
+            slidesPerView: 2
+        },
+        912:{
             slidesPerView: 3
         },
-        992:{
-            slidesPerView: 3
-        },
-        1322:{
+        1270:{
             slidesPerView: 4
         },
-        1622:{
-            slidesPerView: 5
-        }
+    
     },
     navigation:{
         nextEl: '.swiper-button-next-servico',
