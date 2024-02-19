@@ -32,27 +32,28 @@
 .bt{
     padding: .5rem 2.3rem;
 }
-.slide-hotel{
-    padding: 0px 1rem;
-}
 .slide-hotel:hover{
     cursor: pointer;
 }
 
 .container-hoteis{
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 410px;
+    margin: 0 auto;
 }
-
+.container-slide-hoteis{
+    margin-left: 0;
+}
 .swiper-button-prev-hotel,
 .swiper-button-next-hotel {
     width: 60px;
     height: 60px;
-    background-color: rgba(150, 150, 150, 0.473);
+    background-color: rgba(150, 150, 150, 0.26);
     border-radius: 50%;
     color: #fff;
-    font-size: 16px !important;
+    --swiper-navigation-size: 18px;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;

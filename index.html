@@ -12,6 +12,7 @@
     <link href="https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700; 1.800;1.900&display=swap" rel="folha de estilo">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="carousel.css">
     <title>Rictour</title>
 </head>
@@ -45,11 +46,11 @@
   </div>
 </nav>
 
-<div class="container-fluid apresentacao text-center">
+<section class="apresentacao container-fluid  text-center">
   <h1 class="title-apresentacao gradient-text">
     Satisfação em servir, felicidade em trabalhar!
   </h1>
-</div>
+</section>
  
 <div class="swiper-container container-banner">
   <!-- Additional required wrapper -->
@@ -78,7 +79,7 @@
           <div class="conteudo-slide"></div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/5.png" class="img-desktop" alt="">
+      <img src="./resource/point-tour/5.jpg" class="img-desktop" alt="">
       <img src="./resource/point-tour/5-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
@@ -93,7 +94,7 @@
 </div>
 
 
-  <section class="container-fluid container-slide-hoteis" id="section-hoteis">
+  <section class="container-slide-hoteis container-fluid" id="section-hoteis">
     <h1 class="titulo-hoteis"> Hotéis e Resorts</h1>
     <p class="descricao-hoteis">Conheça os hotéis e resorts disponíveis para você.</p>
     <div class="row">
@@ -119,7 +120,6 @@
                 <div class="card-img-overlay card-conteudo">
                     <h4 class="mt-3"><b>Hotel Tivoli</b></h4>
                     <p>O Tivoli está localizado na Praia do Forte, no litoral Norte baiano a cerca de 1 hora de carro do Aeroporto de Salvador (57 km).</p>
-                    <a href="#" class="btn bg-success text-light">Reservar</a>
                 </div>
             </div>
           </div>
@@ -227,11 +227,11 @@
 
   </section>
 
-  <div class="texto-alerta text-center pt-5" id="section-servicos">
+  <section class="texto-alerta text-center pt-5 show-animate" id="section-servicos">
     <div class="centralizar pt-5">
       <h1 class="titulo-alerta">É com prazer que apresentamos nossos serviços.</h1>
     </div>
-  </div>
+  </section>
 
   <section class="container-fluid container-servicos pt-5">
     <h1 class="title-servicos">Serviços</h1>
@@ -310,6 +310,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="js/carousel.js"></script>
 <script src="jquery.min.js"></script>
-
+<script src="js/animation.js"></script>
 </body>
 </html>
