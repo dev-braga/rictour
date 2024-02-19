@@ -125,4 +125,16 @@ h1{
         margin-left: 0;
         text-align: center;
     }
+    .titulo-alerta{
+        font-size: 46px;
+    }
+}
+@media (max-width: 688px){
+    .titulo-alerta{
+        font-size: 36px;
+    }
+    .centralizar{
+        text-align: center;
+        width: 80%;
+    }
 }

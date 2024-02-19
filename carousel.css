@@ -136,3 +136,48 @@
         text-align: center;
     }
 }
+@media (max-width: 1592px){
+    .card-conteudo-destino{
+        padding-top: 10.6rem;
+        padding-bottom: 1.2rem;
+    }
+}
+@media (max-width: 1400px){
+    .card-conteudo-destino{
+        padding-top: 8.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 32px;
+    }
+}
+@media (max-width: 1291px){
+    .card-conteudo-destino{
+        padding-top: 5.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 27px;
+    }
+}
+@media (max-width: 1090px){
+    .card-conteudo-destino{
+        padding-top: 4.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 991px){
+    .card-conteudo-destino p{
+        font-size: 16px;
+    }
+    .card-conteudo-destino{
+        padding-top: 14.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 38px;
+    }
+}
