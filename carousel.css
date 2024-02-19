@@ -1,8 +1,12 @@
 .swiper-container{
     overflow: hidden;
 }
-
-
+.img-mobile{
+    display: none;
+}
+.img-desktop{
+    display: block;
+}
 .container-banner {
     width: 100%;
     height: max-content;
@@ -28,21 +32,22 @@
 .bt{
     padding: .5rem 2.3rem;
 }
+.slide-hotel{
+    padding: 0px 1rem;
+}
+.slide-hotel:hover{
+    cursor: pointer;
+}
 
 .container-hoteis{
     width: 100%;
-    height: 465px;
+    height: 410px;
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
   color: #fff;
   font-size: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #007bff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,4 +56,13 @@
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 10;
+}
+
+@media (max-width: 1023px){
+    .img-desktop{
+        display: none;
+    }
+    .img-mobile{
+        display: block;
+    }
 }

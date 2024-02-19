@@ -12,14 +12,21 @@ var swiper = new Swiper('.container-banner', {
 
 var swiperHotel = new Swiper('.container-hoteis', {
     slidesPerView: 1,
-    spaceBetween: 2,
+    spaceBetween: 1,
     breakpoints:{
         640:{
             slidesPerView: 2
         },
         992:{
             slidesPerView: 3
+        },
+        1322:{
+            slidesPerView: 4
+        },
+        1622:{
+            slidesPerView: 5
         }
+        
 
     },
     navigation:{

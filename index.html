@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700; 1.800;1.900&display=swap" rel="folha de estilo">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carousel.css">
@@ -48,29 +48,35 @@
   <div class="swiper-wrapper" grab-cursor="true">
     <!-- Slides -->
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/4.png" alt="">
+      <img src="./resource/point-tour/4.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/4-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/2.png" alt="">
+      <img src="./resource/point-tour/2.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/2-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/1.png" alt="">
+      <img src="./resource/point-tour/1.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/1-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide">
               <a href="#" class="btn btn-lg bg-warning text-light">Acessar</a>
           </div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/3.png" alt="">
+      <img src="./resource/point-tour/3.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/3-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/5.png" alt="">
+      <img src="./resource/point-tour/5.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/5-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
     <div class="swiper-slide slide-banner">
-      <img src="./resource/point-tour/6.png" alt="">
+      <img src="./resource/point-tour/6.svg" class="img-desktop" alt="">
+      <img src="./resource/point-tour/6-mobile.svg" class="img-mobile" alt="">
           <div class="conteudo-slide"></div>
     </div>
   </div>
@@ -85,82 +91,80 @@
     </h1>
   </div>
 
-  <section class="container-fluid mt-5">
+  <section class="container-fluid container-slide-hoteis">
     <h1 class="titulo-hoteis ms-5"> Hotéis e Resorts</h1>
-    <div class="row mx-4">
+    <p class="ms-5">Conheça os hotéis e resorts disponíveis para você.</p>
+    <div class="row ms-4">
       <div class="swiper-container container-hoteis mt-5">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide slide-hotel">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src="https://images.pexels.com/photos/3584283/pexels-photo-3584283.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="" height="300px" class="card-img-top">
-                  </hr>
-                  <h4 class="mt-3">Hotel fulano</h4>
-                  <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
-                  <a href="#" class="btn bg-success text-light">Reservar</a>
-              </div>
+            <div class="card text-center text-light">
+              <img src="https://lh3.googleusercontent.com/proxy/5cGlmKY6xsdRUbnZEeZDTfRFwjOzgcKTBWa2hH59efRbshCo6uQSFY4pns6KbRmQgfi0m-u8FwHmF_6zTCxnV39E-1ooDHMqPmi66iwuV6gNzh8YpZ2SPcKyuKnZaJYzDuQZx2huX30odNtRnDDyqrgRHpjW7Q=s680-w680-h510" 
+                alt="" height="400px" class="card-img rounded-4">
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3">Hotel Vila Galé Marés</h4>
+                    <p>O hotel Vila Galé Salvador fica mesmo em frente à praia de Ondina, a poucos minutos do centro e a apenas 20 minutos do aeroporto.</p>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                </div>
             </div>
           </div>
 
           <div class="swiper-slide slide-hotel">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src="https://images.pexels.com/photos/3678857/pexels-photo-3678857.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="" height="300px" class="card-img-top">
-                  </hr>
-                  <h4 class="mt-3">Hotel fulano</h4>
-                  <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
-                  <a href="#" class="btn bg-success text-light">Reservar</a>
-              </div>
+            <div class="card text-center text-light">
+              <img src="https://lalarebelo.com/wp-content/uploads/2017/08/tivoli-ecoresort-praia-do-forte-bahia-lala-rebelo.jpg" 
+                alt="" height="400px" class="card-img rounded-4" >
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3">Hotel Tivoli</h4>
+                    <p>O Tivoli está localizado na Praia do Forte, no litoral Norte baiano a cerca de 1 hora de carro do Aeroporto de Salvador (57 km).</p>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                </div>
             </div>
           </div>
 
           <div class="swiper-slide slide-hotel">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src="https://images.pexels.com/photos/1058759/pexels-photo-1058759.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="" height="300px" class="card-img-top">
-                  </hr>
-                  <h4 class="mt-3">Hotel fulano</h4>
-                  <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
-                  <a href="#" class="btn bg-success text-light">Reservar</a>
-              </div>
+            <div class="card text-center text-light">
+              <img src="https://images.pexels.com/photos/3584283/pexels-photo-3584283.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="" height="400px" class="card-img rounded-4" >
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3">Hotel fulano</h4>
+                    <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                </div>
             </div>
           </div>
 
           <div class="swiper-slide slide-hotel">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src="https://images.pexels.com/photos/1058759/pexels-photo-1058759.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="" height="300px" class="card-img-top">
-                  </hr>
-                  <h4 class="mt-3">Hotel fulano</h4>
-                  <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
-                  <a href="#" class="btn bg-success text-light">Reservar</a>
-              </div>
+            <div class="card text-center text-light">
+              <img src="https://images.pexels.com/photos/3584283/pexels-photo-3584283.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt="" height="400px" class="card-img rounded-4" >
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3">Hotel fulano</h4>
+                    <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                </div>
             </div>
           </div>
 
           <div class="swiper-slide slide-hotel">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src="https://images.pexels.com/photos/1058759/pexels-photo-1058759.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="" height="300px" class="card-img-top">
-                  </hr>
-                  <h4 class="mt-3">Hotel fulano</h4>
-                  <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
-                  <a href="#" class="btn bg-success text-light">Reservar</a>
-              </div>
+            <div class="card text-center text-light">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipNWlgx0QgQ4W0nqJISTn9s0pbqAN8kcO9Bmtq5S=s680-w680-h510" 
+                alt="" height="400px" class="card-img rounded-4" >
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3">Hotel fulano</h4>
+                    <p>hotel situado a 30km do aeroporto de salvador, com isso, aquilo e aquilo outro</p>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                </div>
             </div>
           </div>
-        </div>
 
-        <div class="swiper-button-prev swiper-button-prev-hotel"></div>
-        <div class="swiper-button-next swiper-button-next-hotel"></div>
       </div>
     </div>
+  </section>
+
+  <section class="container-fluid container-destinos pt-5">
+    <h1 class="ms-5">Destinos</h1>
+    <p class="ms-5">Conheça os destinos mais visitados do Estado.</p>
   </section>
 
   <!-- Botão do WhatsApp -->

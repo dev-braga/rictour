@@ -3,26 +3,35 @@
   --light-blue :#56c1ca;
   --dark-brown: #231C24;
   --dark-gray: #324E54;
+  --brown: #4C3B35;
+  --orange: #DD8547;
+  --dark: #1d1d1f;
+
 }
 
 html, body{
     margin: 0;
     padding: 0;
 
-    font-family: "Lilita One", sans-serif;
-    font-weight: 400;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     overflow-x: hidden;
-    background-color: #f3f3f3;
+    background-color: #fbfbfd;
+}
+h1{
+    letter-spacing: -2px;
+    font-weight: bold;
 }
 .collapse{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
 }
 .navbar li a {
-    color: var(--dark-blue);
+    color: var(--dark);
 }
 .nav-link:focus{
     color: var(--light-blue);
@@ -30,16 +39,22 @@ html, body{
 
 /* Section - Hoteis e Resorts ----*/
 
-.titulo-hoteis{
-    color:  var(--dark-blue);
+.container-slide-hoteis{
+    margin-left: 4rem;
 }
+
+.titulo-hoteis{
+    margin-top: 2.5rem;
+    color:  var(--dark);
+    letter-spacing: -2px;
+}
+
 .gradient-text{
     font-size: 34px;
-    background: linear-gradient(45deg, rgb(6, 6, 155), red, #3458f7, blue, red);
+    background: linear-gradient(45deg, rgb(40, 80, 165), rgb(204, 41, 41), #3458f7, rgb(59, 103, 226), rgb(255, 0, 43));
     --webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-transform: uppercase;
 }
 
 .whatsapp-button {
@@ -61,4 +76,39 @@ html, body{
     height: 40px; 
     border-radius: 50%;     
     transition: transform 0.3s ease-in-out;
+}
+.card-img{
+    margin-top: 2px;
+    filter: brightness(0.7);
+}
+.card{
+    border-radius: 40px;
+    transition: transform 0.3s;
+    border: none;
+}
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301)0;
+}
+.card-conteudo{
+
+    padding-top: 10.2rem;
+    padding-bottom: 1.2rem;
+}
+
+/* SESSAO DESTINOS ------> */
+
+.container-destinos{
+    margin-left: 4rem;
+}
+
+@media (max-width: 1024px){
+    .container-slide-hoteis{
+        margin-left: 0;
+        text-align: center;
+    }
+    .container-destinos{
+        margin-left: 0;
+        text-align: center;
+    }
 }
