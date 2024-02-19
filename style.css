@@ -39,9 +39,6 @@ h1{
 
 /* Section - Hoteis e Resorts ----*/
 
-.container-slide-hoteis{
-    margin-left: 4rem;
-}
 
 .titulo-hoteis{
     margin-top: 2.5rem;
@@ -77,29 +74,40 @@ h1{
     border-radius: 50%;     
     transition: transform 0.3s ease-in-out;
 }
-.card-img{
-    margin-top: 2px;
-    filter: brightness(0.7);
-}
-.card{
-    border-radius: 40px;
-    transition: transform 0.3s;
-    border: none;
-}
-.card:hover{
-    transform: scale(1.01);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301)0;
-}
-.card-conteudo{
-
-    padding-top: 10.2rem;
-    padding-bottom: 1.2rem;
-}
-
 /* SESSAO DESTINOS ------> */
 
 .container-destinos{
+    width: 100%;
+}
+.container-slide-hoteis,
+.title-destinos,
+.descricao-destinos,
+.title-servicos,
+.descricao-servicos
+{
     margin-left: 4rem;
+}
+
+/* SESSAO QUEM SOMOS */
+.container-quem-somos{
+    margin-left: 4rem;
+}
+.texto-alerta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+}
+.centralizar{
+    text-align: center;
+    width: 50%;
+}
+.titulo-alerta{
+    font-size: 66px;
+    line-height: 1;
+    letter-spacing: -0.043em;
+    color: var(--dark);
+    font-weight: 700;
 }
 
 @media (max-width: 1024px){
@@ -107,7 +115,8 @@ h1{
         margin-left: 0;
         text-align: center;
     }
-    .container-destinos{
+    .title-destinos,
+    .descricao-destinos{
         margin-left: 0;
         text-align: center;
     }
