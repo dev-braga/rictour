@@ -9,6 +9,14 @@
 
 }
 
+.material-icons {
+    text-align: start;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 74px;  /* Preferred icon size */
+  }
+
 html, body{
     margin: 0;
     padding: 0;
@@ -46,8 +54,8 @@ h1{
     letter-spacing: -2px;
 }
 .apresentacao{
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .gradient-text{
     font-size: 46px;
@@ -88,7 +96,8 @@ h1{
 .title-destinos,
 .descricao-destinos,
 .title-servicos,
-.descricao-servicos
+.descricao-servicos,
+.title-qualidade
 {
     margin-left: 4rem;
 }

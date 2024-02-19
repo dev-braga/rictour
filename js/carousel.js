@@ -51,3 +51,27 @@ var swiperDestions = new Swiper('.swiper-destinos', {
         prevEl: '.swiper-button-prev-destino'
     },
 });
+
+
+var swiperHotel = new Swiper('.swiper-servicos', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    breakpoints:{
+        640:{
+            slidesPerView: 3
+        },
+        992:{
+            slidesPerView: 3
+        },
+        1322:{
+            slidesPerView: 4
+        },
+        1622:{
+            slidesPerView: 5
+        }
+    },
+    navigation:{
+        nextEl: '.swiper-button-next-hotel',
+        prevEl: '.swiper-button-prev-hotel' 
+    }
+});
