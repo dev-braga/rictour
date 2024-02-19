@@ -120,12 +120,49 @@
     font-size: 38px;
     letter-spacing: -2px;
 }
-.row-servicoes{
-    
-}
 /* CARDS SERVICOS --- */
+.swiper-servicos{
+    position: relative;
+    width: 90%;
+    height: 290px;
+    margin: 0 auto;
+}
+.swiper-button-next-servico,
+.swiper-button-prev-servico{
+    border-radius: 50%;
+    color: #000000d7;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: #0000003a;
+    position: absolute;
+    top:97%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 14;
+    --swiper-navigation-size: 10px;
+}
+.swiper-button-next-servico:hover,
+.swiper-button-prev-servico:hover{
+    background-color: #00000069;
+}
+.swiper-button-next-destino{
+    right: 30px;
+}
+.swiper-button-next-servico, 
+.swiper-rtl 
+.swiper-button-prev-servico{
+    right: var(--swiper-navigation-sides-offset, 20px);
+    left: 35px;
+} 
+.swiper-button-prev-destino{
+    margin-left: 2rem;
+}
 .slide-servico{
-    background: linear-gradient(90deg, #1256b4, #3f95f7) ;
+    background: linear-gradient(45deg, #0c3979, #1b4f97) ;
     height: 250px;
 }
 

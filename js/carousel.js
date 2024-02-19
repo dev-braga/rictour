@@ -54,8 +54,8 @@ var swiperDestions = new Swiper('.swiper-destinos', {
 
 
 var swiperHotel = new Swiper('.swiper-servicos', {
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
     breakpoints:{
         640:{
             slidesPerView: 3
@@ -71,7 +71,7 @@ var swiperHotel = new Swiper('.swiper-servicos', {
         }
     },
     navigation:{
-        nextEl: '.swiper-button-next-hotel',
-        prevEl: '.swiper-button-prev-hotel' 
+        nextEl: '.swiper-button-next-servico',
+        prevEl: '.swiper-button-prev-servico' 
     }
 });
