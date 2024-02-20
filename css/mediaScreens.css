@@ -71,6 +71,10 @@
     .img-mobile{
         display: block;
     }
+    .apresentacao{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
 }
 @media (max-width: 720px){
     .card-conteudo{
@@ -225,5 +229,11 @@
     }
     .slide-servico{
         height: 280px;
+    }
+}
+
+@media (max-width: 414px){
+    .navbar .container{
+        margin: 0 20px;;
     }
 }
