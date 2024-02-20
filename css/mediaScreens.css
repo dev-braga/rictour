@@ -1,0 +1,229 @@
+/* Estilo geral --- */
+
+/* NAVBAR ------------ */
+
+@media (min-width: 992px){ /* Deixar a navbar fixa quando vista pelo desktop*/
+    .navbar{
+        width: 100%;
+        position: fixed;
+        background-color: #fff;
+        z-index: 1000;
+        box-shadow: 0px 10px 29px 0px #5c67ff07;
+    }
+    .swiper-backface-hidden .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+/* NAVBAR ------------ */
+
+@media (max-width: 1024px){
+    .container-slide-hoteis{
+        text-align: center;
+    }
+    .title-destinos,
+    .descricao-destinos{
+        margin-left: 0;
+        text-align: center;
+    }
+    .titulo-alerta{
+        font-size: 46px;
+    }
+}
+@media (max-width: 688px){
+    .titulo-alerta{
+        font-size: 46px;
+        
+    }
+    .texto-alerta{
+        padding: 0 20px;
+    }
+    .centralizar{
+        text-align: center;
+        width: 80%;
+    }
+    .titulo-hoteis,
+    .descricao-hoteis,
+    .title-servicos,
+    .descricao-servicos{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+
+/* ESTILO CAROUSEL ---------------------- 
+    Media queries do Carousel
+*/
+
+@media (max-width: 1023px){
+    .img-desktop{
+        display: none;
+    }
+    .navbar{
+        position: relative;
+    }
+    .img-mobile{
+        display: block;
+    }
+}
+@media (max-width: 720px){
+    .card-conteudo{
+        padding-top: 9.2rem;
+        font-size: 15px;
+    }
+}
+@media (max-width: 640px){
+    .container-slide-hoteis{
+        text-align: center;
+    }
+}
+@media (max-width: 1592px){
+    .card-conteudo-destino{
+        padding-top: 10.6rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 1400px){
+    .card-conteudo-destino{
+        padding-top: 8.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1291px){
+    .card-conteudo-destino{
+        padding-top: 5.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 27px;
+    }
+    .swiper-servicos{
+        width: 100%;
+        margin-left: unset;
+    }
+    .swiper-button-next-servico, 
+    .swiper-rtl-servico 
+    .swiper-button-prev-servico{
+       position: absolute;
+       right: 40%;
+       bottom: 20px;
+       left: unset;
+    }
+    .swiper-button-prev-servico, 
+    .swiper-rtl-servico 
+    .swiper-button-next-servico {
+        left: 40%;
+        right: auto;
+    }
+}
+@media (max-width: 1090px){
+    .card-conteudo-destino{
+        padding-top: 4.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino p{
+        font-size: 14px;
+    }
+    .navbar-nav{
+        transition: ease 0.5s;
+        transform: translateX(0);
+    }
+}
+@media (max-width: 991px){
+    .card-conteudo-destino p{
+        font-size: 16px;
+    }
+    .slide-servico{
+        margin: 0 auto;
+    }
+    .card-conteudo-destino{
+        padding-top: 14.6rem;
+        padding-bottom: 1.2rem;
+    }
+    .card-conteudo-destino h4{
+        font-size: 38px;
+    }
+
+    /* --- Navbar --- */
+    .navbar-brand{
+        position: unset;
+    }
+    .navbar-toggler{
+        z-index: 5000;
+        border: none;
+    }
+    .navbar-toggler:active{
+        border: none;
+    }
+    .navbar-nav{
+        position: fixed;
+        top:0;
+        left: 0;
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        z-index: 2000;
+        transition: ease-in-out .5s;
+        transform: translateX(100);
+        padding-top: 5rem;
+    }
+    .nav-item{
+        width: 100%;
+        padding: 2px;
+    }
+    .navbar-nav .nav-link{
+        color: var(--dark);
+        font-size: 34px;
+        margin-left: 4rem;
+        font-weight: 700;
+    }
+    .collapse{
+        align-items: unset;
+        text-align: unset;
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: unset;
+    }
+    .bg-nav{
+        padding: unset;
+        width: 200px;
+        height: 70px;
+        margin-top: 2rem;
+        margin-left: 4rem;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-backface-hidden .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+@media (min-width: 1628px){
+    .swiper-servicos{
+        height: 330px;
+    }
+    .slide-servico{
+        height: 280px;
+    }
+}

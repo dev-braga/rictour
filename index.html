@@ -3,50 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
+     <!-- Importação do Bootstrap --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!-- Importação do Google Icons e Google fonts --> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700; 1.800;1.900&display=swap" rel="folha de estilo">
+    <!-- Importação do Google Icons --> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Importação do swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
-    <link rel="stylesheet" href="carousel.css">
+    <!-- Importação de CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/mediaScreens.css">
     <title>Rictour</title>
 </head>
 <body>
 
   
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="./resource/Rictour-Logo.png" alt="" width="120px">
+      <img src="./resource/Rictour-Logo.png" alt="" width="120px" >
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" id="navbar-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <img class="open-menu-icon" src="./resource/list.svg" width="30px">
+      <img class="close-menu-icon" src="./resource/close.svg" width="26px">
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Início</a>
+          <a class="nav-link" aria-current="page" href="#" onclick="fecharMenu()">Início</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#section-destinos">Destinos</a>
+          <a class="nav-link" href="#section-destinos" onclick="fecharMenu()">Destinos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#section-servicos">Serviços</a>
+          <a class="nav-link" href="#section-servicos" onclick="fecharMenu()">Serviços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Certificação</a>
+          <a class="nav-link" href="#" onclick="fecharMenu()">Certificação</a>
         </li>
+        <li class="nav-item">
+          <a href="#" class="btn bg-success text-light bg-nav" onclick="fecharMenu()">Reservar</a>
+        </li>
+       
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="apresentacao container-fluid  text-center">
+<section class="apresentacao container-fluid  text-center pt-5">
   <h1 class="title-apresentacao gradient-text">
     Satisfação em servir, felicidade em trabalhar!
   </h1>
@@ -120,7 +131,8 @@
                 <div class="card-img-overlay card-conteudo">
                     <h4 class="mt-3"><b>Hotel Tivoli</b></h4>
                     <p>O Tivoli está localizado na Praia do Forte, no litoral Norte baiano a cerca de 1 hora de carro do Aeroporto de Salvador (57 km).</p>
-                </div>
+                    <a href="#" class="btn bg-success text-light">Reservar</a>
+                  </div>
             </div>
           </div>
 
@@ -243,7 +255,7 @@
           
           <div class="swiper-slide slide-servico rounded-4">
             <div class="card text-center text-light">
-                <div class="card-img-overlay card-conteudo-servico">
+                <div class="card-conteudo-servico">
                     <span class="material-icons">directions_car</span>
                     <h1 class="mt-3">Transfer</h1>
                     <p>A Chapada Diamantina é uma região de serras</p>
@@ -254,7 +266,7 @@
           
           <div class="swiper-slide slide-servico rounded-4">
             <div class="card text-center text-light">
-                <div class="card-img-overlay card-conteudo-servico">
+                <div class="card-conteudo-servico">
                   <span class="material-icons">apartment</span>
                   <h1 class="mt-3">City Tour</h1>
                   <p>A Chapada Diamantina é uma região de serras</p>
@@ -264,7 +276,7 @@
 
           <div class="swiper-slide slide-servico rounded-4">
             <div class="card text-center text-light">
-                <div class="card-img-overlay card-conteudo-servico">
+                <div class="card-conteudo-servico">
                   <span class="material-icons">luggage</span>
                   <h1 class="mt-3">Viagens</h1>
                   <p>A Chapada Diamantina é uma região de serras</p>
@@ -274,7 +286,7 @@
 
           <div class="swiper-slide slide-servico rounded-4">
             <div class="card text-center text-light">
-                <div class="card-img-overlay card-conteudo-servico">
+                <div class="card-conteudo-servico">
                   <span class="material-icons">hail</span>
                   <h1 class="mt-3">Á diposição</h1>
                   <p>A Chapada Diamantina é uma região de serras</p>
@@ -311,5 +323,6 @@
 <script src="js/carousel.js"></script>
 <script src="jquery.min.js"></script>
 <script src="js/animation.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

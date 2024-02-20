@@ -30,21 +30,42 @@ h1{
     letter-spacing: -2px;
     font-weight: bold;
 }
+.navbar-toggler-icon-fechado {
+    background-image: url('../resource/close.svg'); /* Substitua pelo caminho real da sua imagem fechada */
+    background-size: contain; /* Ajuste conforme necessário */
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+}
+
 .collapse{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    font-size: 20px;
+    text-align: center;
+    font-size: 21px;
     font-weight: 700;
     letter-spacing: -1.5px;
 }
+.navbar-nav{
+    align-items: center;
+    gap: 7px;
+}
 .navbar li a {
-    color: var(--dark);
+    color: var(--dark-blue);
+    font-weight: 600;
 }
 .nav-link:focus{
     color: var(--light-blue);
 }
-
+.navbar-brand{
+    position: absolute;
+}
+.bg-nav{
+    width: 100px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: normal;
+}
 /* Section - Hoteis e Resorts ----*/
 
 
@@ -54,7 +75,7 @@ h1{
     letter-spacing: -2px;
 }
 .apresentacao{
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 .gradient-text{
@@ -139,37 +160,13 @@ h1{
     color: var(--dark);
     font-weight: 700;
 }
+.close-menu-icon{
+    display: none;
+}
+.open-menu-icon{
+    display: block;
+}
+.navbar-toggler:focus {
+    --bs-navbar-toggler-focus-width: 0;
+}
 
-@media (max-width: 1024px){
-    .container-slide-hoteis{
-        text-align: center;
-    }
-    .title-destinos,
-    .descricao-destinos{
-        margin-left: 0;
-        text-align: center;
-    }
-    .titulo-alerta{
-        font-size: 46px;
-    }
-}
-@media (max-width: 688px){
-    .titulo-alerta{
-        font-size: 46px;
-        
-    }
-    .texto-alerta{
-        padding: 0 20px;
-    }
-    .centralizar{
-        text-align: center;
-        width: 80%;
-    }
-    .titulo-hoteis,
-    .descricao-hoteis,
-    .title-servicos,
-    .descricao-servicos{
-        text-align: center;
-        margin-left: 0;
-    }
-}
