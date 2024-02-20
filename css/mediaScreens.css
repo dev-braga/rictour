@@ -1,6 +1,12 @@
 /* Estilo geral --- */
 
 /* NAVBAR ------------ */
+.img-destino-mobile{
+    display: none;
+}
+.img-destino-desktop{
+    display: block;
+}
 
 @media (min-width: 992px){ /* Deixar a navbar fixa quando vista pelo desktop*/
     .navbar{
@@ -54,6 +60,18 @@
         text-align: center;
         margin-left: 0;
     }
+    .titulo-hoteis,
+    .title-servicos,
+    .title-destinos
+    {
+        margin-top: 4rem;
+        font-size: 34px;
+    }
+    .descricao-destinos,
+    .descricao-hoteis,
+    .descricao-servicos{
+        font-size: 18px;
+    }
 }
 
 
@@ -86,6 +104,19 @@
     .container-slide-hoteis{
         text-align: center;
     }
+
+    .container-destinos,
+    .container-destinos .row{
+        --bs-gutter-x: 0;
+    }
+
+    .img-destino-mobile{
+        display: block;
+    }
+    .img-destino-desktop{
+        display: none;
+    }
+    
 }
 @media (max-width: 1592px){
     .card-conteudo-destino{
