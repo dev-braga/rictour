@@ -1,9 +1,0 @@
-section h1{
-   transition: 0.1s;
-}
-.texto-alerta.show-animate .titulo-alerta{
-    transform: translate(0);
-} 
-.texto-alerta.show-animate .titulo-alerta{
-    transform: translate(100%);
-}
