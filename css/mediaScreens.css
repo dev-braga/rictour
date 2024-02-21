@@ -69,6 +69,8 @@
         width: 80%;
     }
     .titulo-hoteis,
+    .title-qualidade,
+    .title-quem-somos,
     .descricao-hoteis,
     .title-servicos,
     .descricao-servicos{
@@ -98,6 +100,15 @@
     footer .row{
         padding-left: 0;
     }
+    .accordion{
+        padding: 2rem 0;
+        width: 90%;
+    }
+    .container-quem-somos{
+        text-align: center;
+        align-items: center;
+        margin-left: 0;
+    }
 }
 
 
@@ -124,10 +135,6 @@
     .apresentacao{
         margin-top: 0;
         margin-bottom: 1rem;
-    }
-    .container-quem-somos{
-        align-items: center;
-        margin-left: 0;
     }
 
 }
@@ -343,6 +350,24 @@
     }
     .accordion{
         width: 99%;
+    }
+    footer .row {
+        width: 100%;
+        padding: 0;
+    }
+    .px-4 {
+        padding-right: 0!important;
+        padding-left: 0rem!important;
+    }
+    .ps-4 {
+        padding-left: 1rem!important;
+    }
+    .btn-contato{
+        width: 150px;
+        font-size: 14px;
+    }
+    footer .row .mb-2 {
+        padding-left: 1rem;
     }
 }
 @media (min-width: 320px) {

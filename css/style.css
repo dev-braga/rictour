@@ -154,7 +154,10 @@ h1{
     align-items: start;
     margin-left: 4rem;
 }
-
+.container-quem-somos{
+    align-items: start;
+   
+}
 .accordion{
     padding: 4rem 0;
     width: 80%;
@@ -306,8 +309,11 @@ footer .row{
     padding: 7rem 4rem;
     flex-wrap: wrap;
 }
-
 .texto-coryrighter{
     text-align: center;
     font-size: 14px;
+}
+.btn-contato-conteudo{
+    display: flex;
+    vertical-align: center;
 }
