@@ -65,6 +65,11 @@ h1{
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: normal;
+
+    color: #FFF;
+
+    -webkit-box-shadow: 0 4px 10px rgba(44, 211, 2, 0.25);
+    box-shadow: 0 4px 10px rgba(20, 122, 20, 0.25);
 }
 /* Section - Hoteis e Resorts ----*/
 
@@ -209,6 +214,7 @@ h1{
     margin-top:0px;
     transform: rotate(-135deg);
 }
+
 
 /* quando o menu é aberto */
 .navbar-toggler.collapsed .top-bar{

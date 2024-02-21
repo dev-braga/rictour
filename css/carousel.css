@@ -101,7 +101,6 @@
 }
 .card:hover{
     transform: scale(1.01);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.301)0;
     cursor: pointer;
 }
 
@@ -114,6 +113,7 @@
 .card-conteudo-destino{
     padding-top: 14.6rem;
     padding-bottom: 1.2rem;
+    background-color: #00000088;
 }
 .card-img-overlay{
     text-align: left;
@@ -156,20 +156,28 @@
 .swiper-button-next-destino{
     right: 30px;
 }
+
+.swiper-button-next-destino, 
+.swiper-rtl 
+.swiper-button-prev-destino{
+    right: var(--swiper-navigation-sides-offset, 20px);
+    left: 55px;
+}
+
 .swiper-button-next-servico, 
 .swiper-rtl 
 .swiper-button-prev-servico{
     right: var(--swiper-navigation-sides-offset, 20px);
     left: 45px;
-} 
+}
+ 
 
 .slide-servico{
     transition: 0.5s;
-    background-color: rgb(8, 42, 136);
+    background-color: rgb(18, 72, 218);
     height: 280px;
-    -webkit-box-shadow: -1px 0px 50px -31px rgba(31,31,31,0.24);
-    -moz-box-shadow: -1px 0px 50px -31px rgba(31,31,31,0.24);
-    box-shadow: -1px 0px 50px -31px rgba(31,31,31,0.24);       
+    -webkit-box-shadow: 0 4px 10px rgba(2, 75, 211, 0.26);
+    box-shadow: 0 4px 10px rgba(20, 61, 122, 0.342);       
 }
 .slide-servico:hover{
    transform: scale(1.01);
