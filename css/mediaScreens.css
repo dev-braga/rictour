@@ -20,6 +20,7 @@
         z-index: 1000;
         box-shadow: 0px 10px 29px 0px #5c67ff07;
     }
+   
     .swiper-backface-hidden .swiper-slide {
         display: flex;
         justify-content: center;
@@ -94,6 +95,9 @@
         height: 700px;
         background-color: black;
     }
+    footer .row{
+        padding-left: 0;
+    }
 }
 
 
@@ -121,6 +125,11 @@
         margin-top: 0;
         margin-bottom: 1rem;
     }
+    .container-quem-somos{
+        align-items: center;
+        margin-left: 0;
+    }
+
 }
 
 @media (max-width: 720px){
@@ -150,6 +159,19 @@
     .card-conteudo-destino {
         padding-top: 2.2rem;
     }
+
+    .title-quem-somos{
+       text-align: center;
+        padding: 0rem 0;
+    }
+    .container-quem-somos{
+        width: 100%;
+        
+    }
+    .accordion{
+        width: 100;
+    }
+
 }
 @media (max-width: 1592px){
     .card-conteudo-destino{
@@ -246,6 +268,7 @@
         transition: ease-in-out .5s;
         transform: translateX(100);
         padding-top: 5rem;
+        overflow-y: hidden;
     }
     .nav-item{
         width: 100%;
@@ -283,6 +306,9 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
+    footer .row .mb-2{
+        padding-left: 1.7rem;
+    }
 }
 @media (max-width: 815px){
     .card-conteudo-destino{
@@ -314,6 +340,9 @@
     }
     .img-destino-desktop{
         display: none;
+    }
+    .accordion{
+        width: 99%;
     }
 }
 @media (min-width: 320px) {
