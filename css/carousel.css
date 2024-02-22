@@ -94,7 +94,7 @@
 }
 
 /* CARDS GERAIS -- */
-.card-img{
+.swiper-destinos .card-img{
     margin-top: 2px;
     filter: brightness(0.7);
 }
@@ -176,7 +176,11 @@
     left: 45px;
 }
  
-
+.swiper-button-next-qualidade,
+.swiper-button-prev-qualidade{
+    color: #141414d7;
+    margin-left: 20px;
+}
 .slide-servico{
     transition: 0.5s;
     background-color: rgb(18, 72, 218);

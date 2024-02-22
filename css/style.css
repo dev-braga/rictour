@@ -86,7 +86,6 @@ h1{
 }
 .gradient-text{
     font-size: 46px;
-    line-height: 1;
     letter-spacing: -0.043em;
     background: linear-gradient(45deg, rgb(40, 80, 165), rgb(204, 41, 41), #3458f7, rgb(59, 103, 226), rgb(255, 0, 43));
     --webkit-background-clip: text;
@@ -140,7 +139,9 @@ h1{
 .descricao-servicos,
 .title-qualidade,
 .titulo-hoteis,
-.descricao-hoteis
+.descricao-hoteis,
+.descricao-qualidade,
+.title-certificacao
 {
     margin-left: 4rem;
 }
@@ -313,7 +314,108 @@ footer .row{
     text-align: center;
     font-size: 14px;
 }
+.mb-2 .btn{
+    white-space: nowrap;
+    max-lines: 1;
+    box-shadow: 0 4px 8px rgba(0, 126, 10, 0.1);
+}
 .btn-contato-conteudo{
     display: flex;
     vertical-align: center;
+}
+
+/* COTAINER QUALIDADE ------- */
+.container-qualidade .card{
+    background-color: #ffffff;
+}
+.swipper-qualidade.swipper-wrapper{
+    padding-bottom: 2rem;
+}
+.container-depoimentos{
+    text-align: center;
+    margin-top: 5rem;
+}
+.container-depoimentos p{
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+.title-qualidade{
+    margin-top: 1rem;
+}
+#section-servicos{
+    height: 80vh;
+}
+.titulo-apresentativo{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 45px;
+    color: var(--dark-blue);
+}
+
+/* DEPOIMENTOS */
+.container-depoimentos .card {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-depoimentos .card .card-body{
+    align-items: center;
+    width: 90%;
+}
+.swipper-depoimentos .swipper.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.slide-depoimentos{
+    width: 80%;
+}
+.container-depoimentos .card p{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 16px;
+}
+.container-depoimentos .card h4{
+    font-weight: 700;
+}
+.container-depoimentos .card-img-top {
+    border-radius: 50%;
+    width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 80px;
+    margin: 15px auto;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+.conteudo-certificacao{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo-certificacao h1{
+    color: #003572;
+}
+.conteudo-certificacao p{
+    color: #003572;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 2rem 0;
+}
+.conteudo-certificacao img{
+    -webkit-box-shadow: 0 4px 10px rgba(2, 134, 211, 0.25);
+    box-shadow: 0 4px 10px rgba(20, 68, 122, 0.25);
+}
+.title-certificacao{
+    margin-top: 5rem;
 }

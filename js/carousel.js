@@ -76,3 +76,51 @@ var swiperHotel = new Swiper('.swiper-servicos', {
         prevEl: '.swiper-button-prev-servico' 
     }
 });
+
+var swiperHotel = new Swiper('.swiper-qualidade', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    breakpoints:{
+        469:{
+            slidesPerView: 1
+        },
+        640:{
+            slidesPerView: 1
+        },
+        912:{
+            slidesPerView: 2
+        },
+        1270:{
+            slidesPerView: 2
+        },
+    
+    },
+    navigation:{
+        nextEl: '.swiper-button-next-qualidade',
+        prevEl: '.swiper-button-prev-qualidade' 
+    }
+});
+
+var swiperHotel = new Swiper('.swiper-depoimentos', {
+    slidesPerView: '1',
+    spaceBetween: 10,
+    autoHeight: true,
+    breakpoints:{
+        469:{
+            slidesPerView: 1
+        },
+        640:{
+            slidesPerView: 1
+        },
+        912:{
+            slidesPerView: 1
+        },
+        1270:{
+            slidesPerView: 3
+        },
+    },
+    navigation:{
+        nextEl: '.swiper-button-next-depoimentos',
+        prevEl: '.swiper-button-prev-depoimentos' 
+    }
+});

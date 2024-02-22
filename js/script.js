@@ -7,7 +7,6 @@ function fecharMenu() {
     }
     if (navBar.classList.contains('show')) {
         navBar.classList.remove('show');
-
     }
 
 }
@@ -44,3 +43,14 @@ const myObserver = new IntersectionObserver( (entries) => {
 
 const elements = document.querySelectorAll('.hidden-animation')
 elements.forEach((element) => myObserver.observe(element))
+
+
+
+// MODAL 
+
+const myModal = document.getElementById('modalReserva')
+const myInput = document.getElementById('btn-reservar')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})

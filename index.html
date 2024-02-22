@@ -59,7 +59,7 @@
                 <a class="nav-link" href="#section-quem-somos" onclick="fecharMenu()">Quem Somos</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="btn bg-success text-light bg-nav" onclick="fecharMenu()">Reservar</a>
+                <a href="#" class="btn bg-success text-light bg-nav"  id="btn-reservar" onclick="fecharMenu()">Reservar</a>
               </li>
             </ul>
           </div>
@@ -67,43 +67,38 @@
       </div>
     </nav>
     
-    <section class="apresentacao hidden-animation container-fluid  text-center pt-5">
+    <div class="apresentacao container-fluid  text-center pt-5">
       <h1 class="title-apresentacao gradient-text">
-        Satisfação em servir, felicidade em trabalhar!
+        Transfer em Salvador e Região!
       </h1>
-    </section>
+    </div>
      
     <div class="swiper-container container-banner">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper" grab-cursor="true">
         <!-- Slides -->
         <div class="swiper-slide slide-banner">
-          <img src="./resource/point-tour/4.jpg" class="img-desktop" alt="">
-          <img src="./resource/point-tour/4-mobile.jpg" class="img-mobile" alt="">
-              <div class="conteudo-slide"></div>
-        </div>
-        <div class="swiper-slide slide-banner">
-          <img src="./resource/point-tour/2.jpg" class="img-desktop" alt="">
-          <img src="./resource/point-tour/2-mobile.jpg" class="img-mobile" alt="">
-              <div class="conteudo-slide"></div>
-        </div>
-        <div class="swiper-slide slide-banner">
-          <img src="./resource/point-tour/1.jpg" class="img-desktop" alt="">
-          <img src="./resource/point-tour/1-mobile.jpg" class="img-mobile" alt="">
-        </div>
-        <div class="swiper-slide slide-banner">
           <img src="./resource/point-tour/3.jpg" class="img-desktop" alt="">
           <img src="./resource/point-tour/3-mobile.jpg" class="img-mobile" alt="">
               <div class="conteudo-slide"></div>
         </div>
         <div class="swiper-slide slide-banner">
-          <img src="./resource/point-tour/5.jpg" class="img-desktop" alt="">
-          <img src="./resource/point-tour/5-mobile.jpg" class="img-mobile" alt="">
+          <img src="./resource/point-tour/1.jpg" class="img-desktop" alt="">
+          <img src="./resource/point-tour/1-mobile.jpg" class="img-mobile" alt="">
               <div class="conteudo-slide"></div>
         </div>
         <div class="swiper-slide slide-banner">
-          <img src="./resource/point-tour/6.jpg" class="img-desktop" alt="">
-          <img src="./resource/point-tour/6-mobile.jpg" class="img-mobile" alt="">
+          <img src="./resource/point-tour/2.jpg" class="img-desktop" alt="">
+          <img src="./resource/point-tour/2-mobile.jpg" class="img-mobile" alt="">
+        </div>
+        <div class="swiper-slide slide-banner">
+          <img src="./resource/point-tour/4.jpg" class="img-desktop" alt="">
+          <img src="./resource/point-tour/4-mobile.jpg" class="img-mobile" alt="">
+              <div class="conteudo-slide"></div>
+        </div>
+        <div class="swiper-slide slide-banner">
+          <img src="./resource/point-tour/5.jpg" class="img-desktop" alt="">
+          <img src="./resource/point-tour/5-mobile.jpg" class="img-mobile" alt="">
               <div class="conteudo-slide"></div>
         </div>
       </div>
@@ -113,8 +108,8 @@
     
     
       <section class="container-slide-hoteis container-fluid" id="section-hoteis">
-        <h1 class="titulo-hoteis hidden-animation"> Hotéis e Resorts</h1>
-        <p class="descricao-hoteis hidden-animation">Conheça os hotéis e resorts disponíveis para você.</p>
+        <h1 class="titulo-hoteis"> Hotéis e Resorts</h1>
+        <p class="descricao-hoteis">Conheça os hotéis e resorts disponíveis para você.</p>
         <div class="row">
           <div class="swiper-container container-hoteis mt-5">
             <div class="swiper-wrapper">
@@ -186,7 +181,7 @@
         </div>
       </section>
     
-      <section class="container-fluid container-destinos pt-5" id="section-destinos">
+      <section class="container-fluid container-destinos pt-5 hidden-animation" id="section-destinos">
         <h1 class="title-destinos hidden-animation">Destinos</h1>
         <p class="descricao-destinos hidden-animation">Conheça os destinos mais visitados do Estado.</p>
     
@@ -420,10 +415,114 @@
 
       </section>
     
-      <section class="container-fluid container-qualidade pt-5" id="section-qualidade">
+      <section class="container-fluid container-qualidade pt-5 hidden-animation" id="section-qualidade">
         <h1 class="title-qualidade">Qualidade e Segurança</h1>
+      
+        <p class="descricao-qualidade">Conheça a nossa frota de veículos.</p>
+        <div class="row">
+          <div class="swiper-container swiper-qualidade mt-5 hidden-animation">
+            <div class="swiper-wrapper">
+    
+              <div class="swiper-slide slide-qualidade">
+                <div class="card text-center text-light">
+                  <img src="./resource/point-tour/RicTour-van.png" 
+                    alt="" class="card-img rounded-1">
+                </div>
+              </div>
+              <div class="swiper-slide slide-qualidade">
+                <div class="card text-center text-light">
+                  <img src="./resource/point-tour/van-citroen.png" 
+                    alt="" class="card-img rounded-2">
+                </div>
+              </div>
+              <div class="swiper-slide slide-qualidade">
+                <div class="card text-center text-light">
+                  <img src="./resource/point-tour/spin.png" 
+                    alt="" class="card-img rounded-2">
+                </div>
+              </div>
+              <div class="swiper-slide slide-qualidade">
+                <div class="card text-center text-light">
+                  <img src="./resource/point-tour/onix.png" 
+                    alt="" class="card-img rounded-2">
+                </div>
+              </div>
+              <div class="swiper-slide slide-qualidade">
+                <div class="card text-center text-light">
+                  <img src="./resource/point-tour/cadeirinha_transporte.png" 
+                    alt="" class="card-img rounded-2">
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-next swiper-button-next-qualidade"></div>
+            <div class="swiper-button-prev swiper-button-prev-qualidade"></div>
+          </div>
+        </div>
+
       </section>
 
+
+      <section class="container-fluid container-certificacao">
+        <h1 class="title-certificacao">Certificação</h1>
+        
+          <div class="conteudo-certificacao">
+             <h1 class="titulo-apresentativo-certificacao hidden-animation">Empresa Certificada e Cadastrada.</h1>
+              <p class="hidden-animation">As empresas e profissionais no Cadastur estão aptos ao exercicio de suas atividades.</p>
+            <img class="rounded-4 hidden-animation img-fluid" src="./resource/point-tour/CERTIFICADO_CADASTUR_desktop.webp" alt="">
+            
+          </div>
+
+      </section>
+
+      <section class="container-fluid container-depoimentos">
+        <h1 class="title-qualidade">Depoimentos</h1>
+        <h1 class="titulo-apresentativo">O que os clientes dizem</h1>
+        <p class="descricao-qualidade">Atribuímos um grande valor a relacionamentos sólidos e vimos os benefícios que eles trazem para o nosso negócio.</p>
+        <div class="row">
+          <div class="swiper-container swiper-depoimentos mt-5 hidden-animation">
+            <div class="swiper-wrapper">
+    
+              <div class="swiper-slide slide-depoimentos">
+                 <!-- Card 1 -->
+                 <div class="card">
+                  <img src="./resource/point-tour/Cliente-Rictour.jpg" alt="Imagem do Card" class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">Transporte excelente, 5 estrelas para mim, com total segurança e cuidados em pequenos detalhes, recomendo para todos, farei mais viagens com ele, parapéns!</p>
+                    <h4>Vanusa Duarte Guerreiro</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-depoimentos">
+                          <!-- Card 2 -->
+                <div class="card">
+                  <img src="./resource/point-tour/Felipe-Campos.jpg" alt="Imagem do Card" class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">No inicio do ano, eu e minha familia decidimos fazer uma surpresa para parentes em salvador e uma prima resolveu toda logística do aeroporto para casa. Quando chegamos no aeroporto de SSA, encontramos com o Ricardo, que mesmo com atraso no voo, estava pacientemente nos esperando. Sempre simpático e com aquele sorriso no rosto, Ricardo nos fez sentir confortável. Com uma van extremamente limpa e confortável, foi o que precisávamos. E olha que somos uma família de cinco, três crianças que usam cadeirinhas. Próxima vez que estivermos na região, Ricardo, Rictour com certeza será o nosso meio de transporte de preferência. Qualidade garantida, super recomendo.</p>
+                    <h4>Felipe Campos</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-depoimentos">
+                          <!-- Card 3 -->
+                <div class="card">
+                  <img src="./resource/point-tour/Cintia-Alves.jpg" alt="Imagem do Card" class="card-img-top">
+                  <div class="card-body">
+                    <p class="card-text">A Rictour é uma empresa séria. Comprometida com seus clientes e sua segurança. Eu indico!</p>
+                    <h4>Cintia Alves</h4>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+            <div class="swiper-button-next swiper-button-next-depoimentos"></div>
+            <div class="swiper-button-prev swiper-button-prev-depoimentos"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER --- FOOTER FOOTER --- FOOTER -- FOOTER --- FOOTERFOOTER --- FOOTERFOOTER --- FOOTERFOOTER --- FOOTER -->
       <footer class="py-5 py-md-5 px-4 px-md-3 text-body-secondary">
        
          <div class="row container-fluid">
@@ -468,10 +567,10 @@
                 <p>Nossa equipe de suporte e vendas está disponível 24 horas por dia, 7 dias por semana para responder às suas dúvidas.</p>
               </li>
               <li class="mb-2">
-                <a class="btn btn-success btn-contato" href="https://wa.me/71982877132">
+                <a class="btn btn-success btn-contato nowrap-btn" href="https://wa.me/71982877132">
                   <div class="btn-contato-conteudo">
                     <span class="material-icons" style="font-size: 24px;">
-                      phone </span> (71) 982877132
+                      phone </span>Contate-nos
                   </div>
                 </a>
               </li>

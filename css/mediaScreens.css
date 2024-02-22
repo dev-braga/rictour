@@ -29,6 +29,13 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
+    .titulo-apresentativo{
+        text-align: center;
+        font-size: 55px;
+    }
+    .container-depoimentos .card{
+        width: 80%;
+    }
 }
 
 /* NAVBAR ------------ */
@@ -47,7 +54,6 @@
     }
 
     /* -- Ajuste dos botoes do slider destinos*/
-    
     .swiper-destino{
         width: 100%;
         margin-left: unset;
@@ -73,6 +79,8 @@
     .title-quem-somos,
     .descricao-hoteis,
     .title-servicos,
+    .descricao-qualidade,
+    .title-certificacao,
     .descricao-servicos{
         text-align: center;
         margin-left: 0;
@@ -368,6 +376,13 @@
     }
     footer .row .mb-2 {
         padding-left: 1rem;
+    }
+    .titulo-apresentativo{
+        font-size: 35px;
+        margin-top: 4rem;
+    }
+    .container-depoimentos .card .card-body{
+        width: 100%;
     }
 }
 @media (min-width: 320px) {
