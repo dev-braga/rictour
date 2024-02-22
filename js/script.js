@@ -54,3 +54,16 @@ const myInput = document.getElementById('btn-reservar')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+
+
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    // Toggle a classe 'open' na navbar
+    document.querySelector('.navbar').classList.toggle('open');
+
+    // Verifique se a navbar está aberta antes de adicionar/remover a classe 'navbar-open'
+    if (document.querySelector('.navbar').classList.contains('open')) {
+        document.body.classList.add('navbar-open');
+    } else {
+        document.body.classList.remove('navbar-open');
+    }
+});

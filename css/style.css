@@ -18,7 +18,18 @@ html, body{
     overflow-x: hidden;
     background-color: #fafafa;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
+
+body.navbar-open {
+    overflow: hidden;
+}
+
+/* Ajuste para esconder a barra de rolagem sem causar movimentação do conteúdo */
+body.navbar-open, body.navbar-open * {
+    margin-right: calc(100% - 100vw);
+}
+
 h1{
     letter-spacing: -2px;
     font-weight: bold;
@@ -221,30 +232,35 @@ h1{
 .navbar-toggler .top-bar{
     margin-top:0px;
     transform: rotate(135deg);
+    background-color: #ffffff;
 }
 .navbar-toggler .middle-bar{
     opacity: 0;
     filter: alpha(opacity=0);
+    background-color: #ffffff;
 }
 .navbar-toggler .bottom-bar{
     margin-top:0px;
     transform: rotate(-135deg);
+    background-color: #ffffff;
 }
 
 
 /* quando o menu é aberto */
 .navbar-toggler.collapsed .top-bar{
     margin-top: -12px;
-    transform: rotate(0deg);
+    background-color: #cfcfcf00;
 }
 
 .navbar-toggler.collapsed .middle-bar{
     opacity: 1;
     filter: alpha(opacity=100);
+    background-color: #cfcfcf;
 }
 .navbar-toggler.collapsed .bottom-bar{
     margin-top: 12px;
     transform: rotate(0deg);
+    background-color: #cfcfcf;
 }
 
 .pre-loading{
