@@ -23,13 +23,6 @@ h1{
     letter-spacing: -2px;
     font-weight: bold;
 }
-.navbar-toggler-icon-fechado {
-    background-image: url('../resource/close.svg'); /* Substitua pelo caminho real da sua imagem fechada */
-    background-size: contain; /* Ajuste conforme necessário */
-    width: 30px; /* Ajuste conforme necessário */
-    height: 30px; /* Ajuste conforme necessário */
-}
-
 .collapse{
     display: flex;
     justify-content: end;
