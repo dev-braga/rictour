@@ -290,7 +290,7 @@
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         background-color: rgba(51, 51, 51, 0.9);
-        z-index: 10000;
+        z-index: 2000;
         transition: ease-in-out .5s;
         transform: translateX(100);
         padding-top: 5rem;
@@ -308,11 +308,11 @@
     .collapse{
         display: unset;
         align-items: unset;
+        justify-content: unset;
         text-align: unset;
         font-size: 21px;
         font-weight: 700;
         letter-spacing: unset;
-        overflow: hidden;
     }
     .bg-nav{
         padding: unset;
