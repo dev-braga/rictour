@@ -36,6 +36,9 @@
     .container-depoimentos .card{
         width: 80%;
     }
+    .card-conteudo-servico h1{
+        font-size: 2rem!important;
+    }
 }
 
 /* NAVBAR ------------ */
@@ -58,8 +61,6 @@
         width: 100%;
         margin-left: unset;
     }
-
-    
 
 }
 @media (max-width: 688px){
@@ -116,6 +117,10 @@
         text-align: center;
         align-items: center;
         margin-left: 0;
+    }
+    .conteudo-certificacao h1{
+        font-size: 26px;
+        text-align: center;
     }
 }
 

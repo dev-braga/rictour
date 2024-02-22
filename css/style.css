@@ -9,13 +9,12 @@
 
 }
 
-.material-icons {
-    text-align: start;
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 74px;  /* Preferred icon size */
-  }
+.card-conteudo-servico  img{
+    filter: invert(1);
+}
+.btn-contato-conteudo  img{
+    filter: invert(1);
+}
 
 html, body{
     margin: 0;
@@ -141,7 +140,8 @@ h1{
 .titulo-hoteis,
 .descricao-hoteis,
 .descricao-qualidade,
-.title-certificacao
+.title-certificacao,
+.title-quem-somos
 {
     margin-left: 4rem;
 }
@@ -153,14 +153,13 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin-left: 4rem;
 }
 .container-quem-somos{
     align-items: start;
    
 }
 .accordion{
-    padding: 4rem 0;
+    padding: 4rem 4rem;
     width: 80%;
 }
 .accordion .collapse {
