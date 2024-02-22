@@ -4,11 +4,12 @@ function fecharMenu() {
     var navbar_toggler = document.querySelector('.navbar-toggler')
     if(!navbar_toggler.classList.contains('collapsed')){
         navbar_toggler.classList.add('collapsed')
+        
     }
     if (navBar.classList.contains('show')) {
         navBar.classList.remove('show');
     }
-
+    document.body.style.overflowY = 'auto';
 }
 // Funcao de carregamento de imagens
 function loading(){
@@ -17,15 +18,6 @@ function loading(){
 }
 
 // uso de rolagem suave
-const lenis = new Lenis()
-lenis.on('scroll', (e) => {
-  
-})
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf)
 
 
 
@@ -46,24 +38,15 @@ elements.forEach((element) => myObserver.observe(element))
 
 
 
-// MODAL 
-
-const myModal = document.getElementById('modalReserva')
-const myInput = document.getElementById('btn-reservar')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
-
-
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
     // Toggle a classe 'open' na navbar
-    document.querySelector('.navbar').classList.toggle('open');
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('open');
 
-    // Verifique se a navbar está aberta antes de adicionar/remover a classe 'navbar-open'
-    if (document.querySelector('.navbar').classList.contains('open')) {
-        document.body.classList.add('navbar-open');
+    // Verifique se a navbar está aberta
+    if (navbar.classList.contains('open')) {
+        document.body.style.overflowY = 'hidden';
     } else {
-        document.body.classList.remove('navbar-open');
+        document.body.style.overflowY = 'auto';
     }
 });
