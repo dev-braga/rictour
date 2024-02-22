@@ -8,7 +8,12 @@
   --dark: #1d1d1f;
 
 }
-
+body.navbar-open {
+    overflow: hidden;
+}
+.navbar-open{
+    left: 0;
+}
 html, body{
     margin: 0;
     padding: 0;

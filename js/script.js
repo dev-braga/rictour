@@ -40,13 +40,12 @@ elements.forEach((element) => myObserver.observe(element))
 
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
     // Toggle a classe 'open' na navbar
-    var navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('open');
+    document.querySelector('.navbar').classList.toggle('open');
 
-    // Verifique se a navbar está aberta
-    if (navbar.classList.contains('open')) {
-        document.body.style.overflowY = 'hidden';
+    // Verifique se a navbar está aberta antes de adicionar/remover a classe 'navbar-open' no corpo
+    if (document.querySelector('.navbar').classList.contains('open')) {
+        document.body.classList.add('navbar-open');
     } else {
-        document.body.style.overflowY = 'auto';
+        document.body.classList.remove('navbar-open');
     }
 });
