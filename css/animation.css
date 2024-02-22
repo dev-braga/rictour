@@ -2,11 +2,11 @@
     opacity: 0;
     transition: all 0.4s;
     filter: blur(10px);
-    transform: translateY(20px);
+    transform: translate(-100px);
 }
 .show-animation{
     opacity: 1;
     transition: all 0.4s;
     filter: blur(0);
-    transform: translateY(0);
+    transform: translate(0);
 }

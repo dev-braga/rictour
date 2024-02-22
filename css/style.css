@@ -9,13 +9,6 @@
 
 }
 
-.card-conteudo-servico  img{
-    filter: invert(1);
-}
-.btn-contato-conteudo  img{
-    filter: invert(1);
-}
-
 html, body{
     margin: 0;
     padding: 0;
