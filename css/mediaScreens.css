@@ -142,9 +142,7 @@
     .img-desktop{
         display: none;
     }
-    .navbar{
-        position: relative;
-    }
+    
     .img-mobile{
         display: block;
     }
