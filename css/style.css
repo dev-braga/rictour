@@ -14,6 +14,16 @@ body.navbar-open {
 .navbar-open{
     left: 0;
 }
+.pls{
+    align-items: center;
+    display: flex;
+}
+.pre-line {
+    margin-right: 10px;
+    background-color: var(--orange);
+    width: 20px;
+    height: 2px;
+}
 html, body{
     margin: 0;
     padding: 0;
