@@ -50,7 +50,7 @@ h1{
     color: var(--light-blue);
 }
 .nav-link{
-    color: var(--light-blue);
+    color: var(--dark);
 }
 .navbar-brand{
     position: absolute;
