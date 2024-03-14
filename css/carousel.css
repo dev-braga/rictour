@@ -104,6 +104,9 @@
     border: none;
     --bs-card-bg: #fff00000;
 }
+.slide-hotel img {
+    filter: brightness(0.5);
+}
 .card:hover{
     transform: scale(1.01);
     cursor: pointer;
