@@ -49,3 +49,5 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
         document.body.classList.remove('navbar-open');
     }
 });
+
+

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/mediaScreens.css">
+    <link rel="stylesheet" href="css/modal.css">
     <title>Rictour</title>
 </head>
 <body onload="loading()">
@@ -59,7 +60,10 @@
                 <a class="nav-link" href="#section-quem-somos" onclick="fecharMenu()">Quem Somos</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="btn bg-success text-light bg-nav"  id="btn-reservar" onclick="fecharMenu()">Reservar</a>
+                <a href="#" class="btn bg-success text-light bg-nav"  
+                id="btn-reservar" 
+                data-bs-toggle="modal" data-bs-target="#modalReservar"
+                onclick="fecharMenu()">Reservar</a>
               </li>
             </ul>
           </div>
@@ -112,71 +116,12 @@
         <p class="descricao-hoteis">Conheça os hotéis e resorts disponíveis para você.</p>
         <div class="row">
           <div class="swiper-container container-hoteis mt-5">
-            <div class="swiper-wrapper">
-    
-              <div class="swiper-slide slide-hotel">
-                <div class="card text-center text-light">
-                  <img src="https://lh3.googleusercontent.com/proxy/5cGlmKY6xsdRUbnZEeZDTfRFwjOzgcKTBWa2hH59efRbshCo6uQSFY4pns6KbRmQgfi0m-u8FwHmF_6zTCxnV39E-1ooDHMqPmi66iwuV6gNzh8YpZ2SPcKyuKnZaJYzDuQZx2huX30odNtRnDDyqrgRHpjW7Q=s680-w680-h510" 
-                    alt="" height="400px" class="card-img rounded-4">
-                    <div class="card-img-overlay card-conteudo">
-                        <h4 class="mt-3"><b>Hotel Vila Galé Marés</b></h4>
-                        <p>O hotel Vila Galé Salvador fica mesmo em frente à praia de Ondina, a poucos minutos do centro e a apenas 20 minutos do aeroporto.</p>
-                        <a href="#" class="btn bg-success text-light">Reservar</a>
-                    </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-hotel">
-                <div class="card text-center text-light">
-                  <img src="https://lalarebelo.com/wp-content/uploads/2017/08/tivoli-ecoresort-praia-do-forte-bahia-lala-rebelo.jpg" 
-                    alt="" height="400px" class="card-img rounded-4" >
-                    <div class="card-img-overlay card-conteudo">
-                        <h4 class="mt-3"><b>Hotel Tivoli</b></h4>
-                        <p>O Tivoli está localizado na Praia do Forte, no litoral Norte baiano a cerca de 1 hora de carro do Aeroporto de Salvador (57 km).</p>
-                        <a href="#" class="btn bg-success text-light">Reservar</a>
-                      </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-hotel">
-                <div class="card text-center text-light">
-                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/378203938.jpg?k=3ec9f979ebb2bf3f2a7034a753c49bf7de8a04bac1a05162dece21dd3d050d82&o=&hp=1" 
-                    alt="" height="400px" class="card-img rounded-4" >
-                    <div class="card-img-overlay card-conteudo">
-                        <h4 class="mt-3"><b>Hotel Iberostar Bahia</b></h4>
-                        <p>O hotel está localizado no município de Mata de São João, a cerca de 60 km do Aeroporto de Salvador ou 81 km do Centro de Salvador.</p>
-                        <a href="#" class="btn bg-success text-light">Reservar</a>
-                    </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-hotel">
-                <div class="card text-center text-light">
-                  <img src="https://lh3.googleusercontent.com/p/AF1QipPN0eX_9GenhblNsDG1Y8y_PwF2ChZiABS8hTHA=s680-w680-h510" 
-                    alt="" height="400px" class="card-img rounded-4" >
-                    <div class="card-img-overlay card-conteudo">
-                        <h4 class="mt-3"><b>Hotel Iberostar Praia do Forte</b></h4>
-                        <p>O hotel está localizado no município de Mata de São João, a cerca de 55 km do Aeroporto de Salvador.</p>
-                        <a href="#" class="btn bg-success text-light">Reservar</a>
-                    </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-hotel">
-                <div class="card text-center text-light">
-                  <img src="https://lh3.googleusercontent.com/p/AF1QipPN0eX_9GenhblNsDG1Y8y_PwF2ChZiABS8hTHA=s680-w680-h510" 
-                    alt="" height="400px" class="card-img rounded-4" >
-                    <div class="card-img-overlay card-conteudo">
-                        <h4 class="mt-3"><b>Hotel Grand Palladium</b></h4>
-                        <p>O Grand Palladium Imbassaí Resort & Spa fica a apenas 60 km de Salvador e 45 km do aeroporto, sendo de fácil acesso.</p>
-                        <a href="#" class="btn bg-success text-light">Reservar</a>
-                    </div>
-                </div>
-              </div>
-    
-    
-          </div>
-          <div class="swiper-button-next swiper-button-next-hotel"></div>
+            
+            <div class="swiper-wrapper swipper-w-hotel">
+              <!-- Dados vem do JSON -->
+            </div>
+          
+            <div class="swiper-button-next swiper-button-next-hotel"></div>
           <div class="swiper-button-prev swiper-button-prev-hotel"></div>
         </div>
       </section>
@@ -574,6 +519,37 @@
          
          
       </footer>
+
+      <!-- MODAL DE FORMULÁRIO -->
+
+      <div class="modal fade" id="modalReservar" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalToggleLabel">Formulário de Reserva</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="step-indicator">
+                <span id="step1Indicator" class="active">1. Informações Pessoais</span>
+                <span id="step2Indicator">2. Detalhes da Viagem</span>
+                <span id="step3Indicator">3. Revisão</span>
+              </div>
+              <div id="step1">
+                  <!-- Passo 1: Coleta de informações pessoais -->
+              </div>
+              <div id="step2" style="display: none;">
+                  <!-- Passo 2: Coleta de informações da viagem -->
+              </div>
+              <div id="step3" style="display: none;">
+                <!-- Passo 3: Revisão das informações -->
+              </div>
+            </div>
+            <div class="modal-footer">
+          </div>
+          </div>
+        </div>
+      </div>
     
       <!-- Botão do WhatsApp -->
       <div class="whatsapp-button">
@@ -594,5 +570,7 @@
 <script src="jquery.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/script.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/swipper.js"></script>
 </body>
 </html>

@@ -197,3 +197,6 @@
 .card-conteudo-servico{
     color: var(--light);
 }
+.card-conteudo-servico p{
+    padding: 0 20px;
+}

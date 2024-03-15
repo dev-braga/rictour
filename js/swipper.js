@@ -1,0 +1,72 @@
+const swipperWrapper = document.querySelector('.swipper-w-hotel')
+
+const slidersHoteis = [
+    {
+        "id": 0,
+        "image": "https://lh3.googleusercontent.com/proxy/5cGlmKY6xsdRUbnZEeZDTfRFwjOzgcKTBWa2hH59efRbshCo6uQSFY4pns6KbRmQgfi0m-u8FwHmF_6zTCxnV39E-1ooDHMqPmi66iwuV6gNzh8YpZ2SPcKyuKnZaJYzDuQZx2huX30odNtRnDDyqrgRHpjW7Q=s680-w680-h510",
+        "titulo": "Hotel Vila Galé Marés",
+        "descricao": "O hotel Vila Galé Salvador fica mesmo em frente à praia de Ondina, a poucos minutos do centro e a apenas 20 minutos do aeroporto." 
+    },
+    {
+        "id": 1,
+        "image": "https://lalarebelo.com/wp-content/uploads/2017/08/tivoli-ecoresort-praia-do-forte-bahia-lala-rebelo.jpg",
+        "titulo": "Hotel Tivoli",
+        "descricao": "O Tivoli está localizado na Praia do Forte, no litoral Norte baiano a cerca de 1 hora de carro do Aeroporto de Salvador (57 km)." 
+    },
+    {
+        "id": 2,
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/378203938.jpg?k=3ec9f979ebb2bf3f2a7034a753c49bf7de8a04bac1a05162dece21dd3d050d82&o=&hp=1",
+        "titulo": "Hotel Iberostar Bahia",
+        "descricao": "O hotel está localizado no município de Mata de São João, a cerca de 60 km do Aeroporto de Salvador ou 81 km do Centro de Salvador." 
+    },
+    {
+        "id": 3,
+        "image": "https://lh3.googleusercontent.com/p/AF1QipPN0eX_9GenhblNsDG1Y8y_PwF2ChZiABS8hTHA=s680-w680-h510",
+        "titulo": "Hotel Iberostar Praia do Forte",
+        "descricao": "O hotel está localizado no município de Mata de São João, a cerca de 55 km do Aeroporto de Salvador." 
+    },
+    {
+        "id": 4,
+        "image": "https://lh3.googleusercontent.com/p/AF1QipPN0eX_9GenhblNsDG1Y8y_PwF2ChZiABS8hTHA=s680-w680-h510",
+        "titulo": "Hotel Grand Palladium",
+        "descricao": "O Grand Palladium Imbassaí Resort & Spa fica a apenas 60 km de Salvador e 45 km do aeroporto, sendo de fácil acesso." 
+    }
+]
+
+
+const initSwiper = () => {
+
+    slidersHoteis.forEach( ( values) => {
+        swipperWrapper.innerHTML += `
+            <div class="swiper-slide slide-hotel" id="${values.id}">
+            <div class="card text-center text-light">
+            <img src="${values.image}" 
+                alt="" height="400px" class="card-img rounded-4">
+                <div class="card-img-overlay card-conteudo">
+                    <h4 class="mt-3"><b>${values.titulo}</b></h4>
+                    <p>${values.descricao}</p>
+                    <a href="#" class="btn bg-success text-light" onclick="reservar(${values.id})">Reservar</a>
+                </div>
+            </div>
+            </div>
+        
+        `
+    })
+
+}
+
+const reservar = (id) => {
+    switch(id){
+        case 0:
+            alert('marcus 0')
+            break
+        case 1:
+            alert('Bruno')
+            break
+        case 2:
+            alert('Vagner')
+            break
+    }
+}
+
+initSwiper()
