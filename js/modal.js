@@ -1,23 +1,37 @@
+// Quando o modal é aberto
+$('#modalReserva').on('show.bs.modal', function () {
+  // Adiciona uma classe ao corpo que desativa o overflow
+  $('body').addClass('modal-open-no-scroll');
+  $('body').addClass('navbar-collapsed-menu');
+});
+
+// Quando o modal é fechado
+$('#modalReserva').on('hidden.bs.modal', function () {
+  // Remove a classe do corpo que desativa o overflow
+  $('body').removeClass('modal-open-no-scroll');
+  $('body').removeClass('navbar-collapsed-menu');
+});
+
 function nextStep(currentStep) {
-    document.getElementById('step' + currentStep).style.display = 'none';
-    document.getElementById('step' + (currentStep + 1)).style.display = 'block';
-    
-    // Atualiza o indicador de passo
-    document.getElementById('step' + currentStep + 'Indicator').classList.remove('active');
-    document.getElementById('step' + (currentStep + 1) + 'Indicator').classList.add('active');
-    
-    if (currentStep === 2) {
-      displayReviewInfo(); // Chama a função para exibir as informações de revisão quando o usuário avança para o passo 3
-    }
+  document.getElementById('step' + currentStep).style.display = 'none';
+  document.getElementById('step' + (currentStep + 1)).style.display = 'block';
+  
+  // Atualiza o indicador de passo
+  document.getElementById('step' + currentStep + 'Indicator').classList.remove('active');
+  document.getElementById('step' + (currentStep + 1) + 'Indicator').classList.add('active');
+  
+  if (currentStep === 2) {
+    displayReviewInfo(); // Chama a função para exibir as informações de revisão quando o usuário avança para o passo 3
+  }
 }
 
 function prevStep(currentStep) {
-    document.getElementById('step' + currentStep).style.display = 'none';
-    document.getElementById('step' + (currentStep - 1)).style.display = 'block';
-    
-    // Atualiza o indicador de passo
-    document.getElementById('step' + currentStep + 'Indicator').classList.remove('active');
-    document.getElementById('step' + (currentStep - 1) + 'Indicator').classList.add('active');
+  document.getElementById('step' + currentStep).style.display = 'none';
+  document.getElementById('step' + (currentStep - 1)).style.display = 'block';
+  
+  // Atualiza o indicador de passo
+  document.getElementById('step' + currentStep + 'Indicator').classList.remove('active');
+  document.getElementById('step' + (currentStep - 1) + 'Indicator').classList.add('active');
 }
 
 function validateEmail() {
@@ -53,7 +67,7 @@ function handleTripOptions() {
 function calculate() {
   var personalInfoForm = document.getElementById("personalInfoForm");
   var travelInfoForm = document.getElementById("travelInfoForm");
-  
+
   if (personalInfoForm.checkValidity() && travelInfoForm.checkValidity()) {
     // Coletar informações pessoais
     var fullName = personalInfoForm.elements["fullName"].value;
@@ -78,27 +92,29 @@ function calculate() {
     }
 
     // Criar a mensagem para enviar via WhatsApp
-    var message = "Olá! Segue abaixo as informações da viagem:\n\n" +
-                  "Nome Completo: " + fullName + "\n" +
-                  "Email: " + email + "\n" +
-                  "WhatsApp: " + whatsapp + "\n\n" +
-                  "Tipo de Serviço: " + serviceType + "\n\n" +
-                  "Informações da Viagem:\n" +
-                  "Quantidade de Adultos: " + numberOfAdults + "\n" +
-                  "Quantidade de Crianças: " + numberOfChildren + "\n" +
-                  "Necessita de Cadeira Infantil: " + (needChildSeat ? "Sim" : "Não") + "\n" +
-                  "Tipo de Veículo: " + vehicleType + "\n" +
-                  "Tipo de Viagem: " + roundTrip + "\n" +
-                  "Data de Partida: " + departureDate + "\n" +
-                  "Data de Retorno: " + returnDate + "\n" +
-                  "Endereço de Partida: " + departureAddress + "\n" +
-                  "Endereço de Destino: " + destinationAddress;
-
+    var message = "*Olá! Segue abaixo as informações da viagem:\n\n*" +
+                  "*Nome Completo:* " + fullName + "\n" +
+                  "*Email:* " + email + "\n" +
+                  "*WhatsApp:* " + whatsapp + "\n\n" +
+                  "*Tipo de Serviço:* " + serviceType + "\n\n" +
+                  "*Informações da Viagem:\n*" +
+                  "*Quantidade de Adultos:* " + numberOfAdults + "\n" +
+                  "*Quantidade de Crianças:* " + numberOfChildren + "\n" +
+                  "*Necessita de Cadeira Infantil:* " + (needChildSeat ? "Sim" : "Não") + "\n" +
+                  "*Tipo de Veículo:* " + vehicleType + "\n" +
+                  "*Tipo de Viagem:* " + roundTrip + "\n" +
+                  "*Data de Partida:* " + departureDate + "\n";
+                  if (returnDate !== "") {
+                    message += "*Data de Retorno:* " + returnDate + "\n";
+                  }
+              
+                  message += "*Endereço de Partida:* " + departureAddress + "\n" +
+                             "*Endereço de Destino:* " + destinationAddress;    
     // URL para enviar mensagem via WhatsApp
     var whatsappURL = "https://api.whatsapp.com/send?phone=" + encodeURIComponent(whatsapp) + "&text=" + encodeURIComponent(message);
 
     // Redirecionar para o WhatsApp
-    window.location.href = whatsappURL;
+    window.open(whatsappURL);
   } else {
     var errorMessage = document.getElementById("travelInfoError");
     errorMessage.textContent = "Por favor, preencha todos os campos antes de prosseguir.";
@@ -114,14 +130,17 @@ function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
     } else {
       return "Sedan";
     }
-  } else if (totalPassengers <= 7) {
+  } else if (totalPassengers <= 6) {
     if (needChildSeat) {
       return "Minivan (com cadeira infantil)";
     } else {
       return "Minivan";
     }
-  } else {
-    return "Van";
+  } else if (totalPassengers <= 10)
+  if (needChildSeat) {
+    return "Van (Com Cadeira Infatil)";
+    } else {
+      return "Van";
   }
 }
 

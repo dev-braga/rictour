@@ -62,8 +62,8 @@
               <li class="nav-item">
                 <a href="#" class="btn bg-success text-light bg-nav"  
                 id="btn-reservar" 
-                data-bs-toggle="modal" data-bs-target="#modalReservar"
-                onclick="fecharMenu()">Reservar</a>
+                data-bs-toggle="modal" data-bs-target="#modalReserva"
+                onclick="fecharMenu()">Reservar</a> 
               </li>
             </ul>
           </div>
@@ -119,6 +119,8 @@
             
             <div class="swiper-wrapper swipper-w-hotel">
               <!-- Dados vem do JSON -->
+              
+
             </div>
           
             <div class="swiper-button-next swiper-button-next-hotel"></div>
@@ -259,49 +261,8 @@
     
         <div class="row p-2 row-servicoes hidden-animation">
           <div class="swiper-container swiper-servicos mt-3">
-            <div class="swiper-wrapper wrapper-servicos">
-              
-              <div class="swiper-slide slide-servico rounded-4">
-                <div class="card text-center text-light">
-                    <div class="card-conteudo-servico">
-                      <img src="./resource/point-tour/transfer.svg" alt="" height="75px">
-                        <h1 class="mt-3">Transfer</h1>
-                        <p>Transporte confiável e confortável entre aeroportos, hotéis e mais.</p>
-                    </div>
-                </div>
-              </div>
-    
-              
-              <div class="swiper-slide slide-servico rounded-4">
-                <div class="card text-center text-light">
-                    <div class="card-conteudo-servico">
-                     <img src="./resource/point-tour/citytour.svg" alt="" height="75px">
-                      <h1 class="mt-3">City Tour</h1>
-                      <p>Explore os principais pontos turísticos da cidade em uma excursão guiada.</p>
-                    </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-servico rounded-4">
-                <div class="card text-center text-light">
-                    <div class="card-conteudo-servico">
-                      <img src="./resource/point-tour/travel.svg" alt="" height="75px">
-                      <h1 class="mt-3">Viagens</h1>
-                      <p> Conectando cidades e destinos com conforto e segurança.</p>
-                    </div>
-                </div>
-              </div>
-    
-              <div class="swiper-slide slide-servico rounded-4">
-                <div class="card text-center text-light">
-                    <div class="card-conteudo-servico">
-                      <img src="./resource/point-tour/adisposicao.svg" alt="" height="75px">
-                      <h1 class="mt-3">Á diposição</h1>
-                      <p>Flexibilidade total e conveniência para seus deslocamentos personalizados.</p>
-                    </div>
-                </div>
-              </div>
-    
+            <div class="swiper-wrapper wrapper-servicos">    
+              <!-- DADOS VINDO DO JSON -->
             </div>
             <div class="swiper-button-next swiper-button-next-servico"></div>
             <div class="swiper-button-prev swiper-button-prev-servico"></div>
@@ -522,35 +483,123 @@
 
       <!-- MODAL DE FORMULÁRIO -->
 
-      <div class="modal fade" id="modalReservar" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="ModalToggleLabel">Formulário de Reserva</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- Modal -->
+<div class="modal fade" id="modalReserva" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Formulário de Reserva</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Indicador de passo -->
+        <div class="step-indicator">
+          <span id="step1Indicator" class="active">1. Informações Pessoais</span>
+          <span id="step2Indicator">2. Detalhes da Viagem</span>
+          <span id="step3Indicator">3. Revisão</span>
+        </div>
+
+        <!-- Passo 1: Coleta de informações pessoais -->
+        <div id="step1">
+            <form class="step" id="personalInfoForm">
+                <div class="mb-3">
+                  <label for="fullName" class="form-label">Nome Completo:</label>
+                  <input type="text" class="form-control" id="fullName" name="fullName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required oninput="validateEmail()">
+                  <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="whatsapp" class="form-label">Número para Contato:</label>
+                  <input type="tel" class="form-control" id="whatsapp" name="whatsapp" pattern="[0-9]{10,11}" required>
+                </div>
+                <div class="mb-3">
+                  <label for="serviceType" class="form-label">Tipo de Serviço:</label>
+                  <select class="form-select" id="serviceType" name="serviceType" required>
+                      <option value="">Escolha um Serviço</option>
+                      <option value="Transfer">Transfer</option>
+                      <option value="City Tour">City Tour</option>
+                      <option value="Viagens">Viagens</option>
+                      <option value="A disposição">A disposição</option>
+                  </select>                    
+                </div>
+                <div class="error-message" id="personalInfoError"></div>
+                <button type="button" class="btn btn-primary" onclick="nextStep(1)">Próximo</button>
+            </form>
+        </div>
+
+        <!-- Passo 2: Coleta de informações da viagem -->
+        <div id="step2" style="display: none;">
+            <form class="step" id="travelInfoForm">
+                <div class="mb-3">
+                  <label for="numberOfAdults" class="form-label">Quantidade de Adultos:</label>
+                  <input type="number" class="form-control" id="numberOfAdults" name="numberOfAdults" min="1" max="20" required>
+                </div>
+                <div class="mb-3">
+                  <label for="numberOfChildren" class="form-label">Quantidade de Crianças:</label>
+                  <input type="number" class="form-control" id="numberOfChildren" name="numberOfChildren" min="0" max="20" required>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="needChildSeat" name="needChildSeat">
+                  <label class="form-check-label" for="needChildSeat">Necessita de Cadeira Infantil</label>
+                </div>
+                <input type="hidden" id="vehicleType" name="vehicleType">
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="roundTrip" name="roundTrip" onchange="handleTripOptions()">
+                  <label class="form-check-label" for="roundTrip">Ida e Volta</label>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="oneWayTrip" name="oneWayTrip" onchange="handleTripOptions()">
+                  <label class="form-check-label" for="oneWayTrip">Só Ida</label>
+                </div>
+                <div class="mb-3">
+                  <label for="departureDate" class="form-label">Data de Partida:</label>
+                  <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+                </div>
+                <div class="mb-3" id="returnDateField">
+                  <label for="returnDate" class="form-label">Data de Retorno:</label>
+                  <input type="date" class="form-control" id="returnDate" name="returnDate">
+                </div>
+                <div class="mb-3">
+                  <label for="departureAddress" class="form-label">Endereço de Partida:</label>
+                  <input type="text" class="form-control" id="departureAddress" name="departureAddress" required>
+                </div>
+                <div class="mb-3">
+                  <label for="destinationAddress" class="form-label">Endereço de Destino:</label>
+                  <input type="text" class="form-control" id="destinationAddress" name="destinationAddress" required>
+                </div>
+                <div class="error-message" id="travelInfoError"></div>
+                <button type="button" class="btn btn-primary" onclick="prevStep(2)">Voltar</button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(2)">Próximo</button>
+            </form>
+        </div>
+        
+        <!-- Passo 3: Revisão das informações -->
+        <div id="step3" style="display: none;">
+          <div class="modal-body">
+            <hr>
+            <!-- Div para exibir as informações revisadas -->
+            <div id="reviewInfo">
+              <!-- As informações selecionadas pelo usuário serão exibidas aqui -->
             </div>
-            <div class="modal-body">
-              <div class="step-indicator">
-                <span id="step1Indicator" class="active">1. Informações Pessoais</span>
-                <span id="step2Indicator">2. Detalhes da Viagem</span>
-                <span id="step3Indicator">3. Revisão</span>
-              </div>
-              <div id="step1">
-                  <!-- Passo 1: Coleta de informações pessoais -->
-              </div>
-              <div id="step2" style="display: none;">
-                  <!-- Passo 2: Coleta de informações da viagem -->
-              </div>
-              <div id="step3" style="display: none;">
-                <!-- Passo 3: Revisão das informações -->
-              </div>
+            <hr>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="button" class="btn btn-secondary me-md-2" onclick="prevStep(3)">Voltar</button>
+              <button type="button" class="btn btn-primary" onclick="calculate()">Enviar</button>
             </div>
-            <div class="modal-footer">
-          </div>
           </div>
         </div>
+          
       </div>
-    
+      <div class="modal-footer">
+    </div>
+    </div>
+  </div>
+</div>
+
       <!-- Botão do WhatsApp -->
       <div class="whatsapp-button">
         <a href="https://wa.me/5571982877132?text=Olá, gostaria de saber mais informaçoes." target="_blank" rel="noopener noreferrer">

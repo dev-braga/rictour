@@ -1,4 +1,5 @@
 const swipperWrapper = document.querySelector('.swipper-w-hotel')
+const swipperServicos = document.querySelector('.wrapper-servicos')
 
 const slidersHoteis = [
     {
@@ -34,6 +35,38 @@ const slidersHoteis = [
 ]
 
 
+
+// Slide Serviços
+const slidersServicos = [
+    {
+        "id": 0,
+        "image": "./resource/point-tour/transfer.svg",
+        "titulo": "Transfer",
+        "descricao": "Transporte confiável e confortável entre aeroportos, hotéis e mais."
+    },
+    {
+        "id": 1,
+        "image": "./resource/point-tour/citytour.svg",
+        "titulo": "City Tour",
+        "descricao": "Explore os principais pontos turísticos da cidade em uma excursão guiada."
+    },
+    {
+        "id": 2,
+        "image": "./resource/point-tour/travel.svg",
+        "titulo": "Viagens",
+        "descricao": "Conectando cidades e destinos com conforto e segurança."
+    },
+    {
+        "id": 3,
+        "image": "./resource/point-tour/adisposicao.svg",
+        "titulo": "Á diposição",
+        "descricao": "Flexibilidade total e conveniência para seus deslocamentos personalizados."
+    }
+
+]
+
+
+
 const initSwiper = () => {
 
     slidersHoteis.forEach( ( values) => {
@@ -53,6 +86,20 @@ const initSwiper = () => {
             </div>
             </div>
         
+        `
+    })
+
+    slidersServicos.forEach( data => {
+        swipperServicos.innerHTML += `
+        <div class="swiper-slide slide-servico rounded-4">
+        <div class="card text-center text-light">
+            <div class="card-conteudo-servico">
+              <img src="${data.image}" alt="" height="75px">
+                <h1 class="mt-3">${data.titulo}</h1>
+                <p>${data.descricao}</p>
+            </div>
+        </div>
+      </div>
         `
     })
 
