@@ -9,7 +9,8 @@ function fecharMenu() {
     if (navBar.classList.contains('show')) {
         navBar.classList.remove('show');
     }
-    document.body.style.overflowY = 'auto';
+
+    $('#modalReserva').modal('show');
 }
 // Funcao de carregamento de imagens
 function loading(){

@@ -45,7 +45,9 @@ const initSwiper = () => {
                 <div class="card-img-overlay card-conteudo">
                     <h4 class="mt-3"><b>${values.titulo}</b></h4>
                     <p>${values.descricao}</p>
-                    <a href="#" class="btn bg-success text-light" onclick="reservar(${values.id})">Reservar</a>
+                    <a href="#" class="btn bg-success text-light" data-bs-toggle="modal" data-bs-target="#modalReserva"
+                    onclick="abrirModal(${values.id})"
+                    >Reservar</a>
                 </div>
             </div>
             </div>
@@ -55,18 +57,16 @@ const initSwiper = () => {
 
 }
 
-const reservar = (id) => {
-    switch(id){
-        case 0:
-            alert('marcus 0')
-            break
-        case 1:
-            alert('Bruno')
-            break
-        case 2:
-            alert('Vagner')
-            break
-    }
+const abrirModal = (id) => {
+    // Obter o hotel correspondente ao ID
+    const hotel = slidersHoteis.find(hotel => hotel.id === id);
+    
+    // Preencher o campo de endereço de partida no modal com o endereço do hotel
+    document.getElementById('departureAddress').value = hotel.titulo;
+    
+    // Exibir o modal
+    $('#modalReserva').modal('show');
 }
+
 
 initSwiper()

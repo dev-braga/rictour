@@ -1,50 +1,67 @@
+.modal-open-no-scroll {
+  overflow: hidden;
+}
+
+.navbar-collapsed-menu{
+  overflow: hidden;
+}
+
 .error-message {
-    color: #FF0000;
-    margin-top: 5px;
-  }
-  
-  .modal-title {
-      font-size: 24px;
-      font-weight: bold;
-      background: linear-gradient(90deg, #FF631D, #60BE37, #00ABE4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: background 0.3s ease;
-  }
-  
-  .step-indicator {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .step-indicator span {
-    font-size: 16px;
-  }
-  
-  .step-indicator span.active {
+  color: #FF0000;
+  margin-top: 5px;
+}
+.modal{
+  z-index: 5001;
+  overflow: auto;
+}
+
+/* Gradiente suave para o título do modal */
+.modal-title {
+    font-size: 24px;
     font-weight: bold;
-    color: #007bff;
-  }
+    background: linear-gradient(90deg, #FF631D, #60BE37, #00ABE4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease;
+}
+
+/* Estilo para o indicador de passo */
+.modal-body hr{
+  margin-top: -13px;
+}
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step-indicator span {
+  font-size: 16px;
+}
+
+.step-indicator span.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Estilos para o modal de revisão */
+#step3 {
   
-  #step3 {
-    padding: 20px;
-  }
-  
-  #reviewInfo {
-    margin-bottom: 20px;
-  }
-  
-  #reviewInfo h5 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  #reviewInfo p {
-    margin-bottom: 5px;
-  }
-  
-  .modal-footer {
-    border-top: none;
-  }
-  
+}
+
+#reviewInfo {
+  margin-bottom: 20px;
+}
+
+#reviewInfo h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#reviewInfo p {
+  margin-bottom: 5px;
+}
+
+.modal-footer {
+  border-top: none;
+}

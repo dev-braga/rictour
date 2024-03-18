@@ -8,9 +8,6 @@
   --dark: #1d1d1f;
 
 }
-body.navbar-open {
-    overflow: hidden;
-}
 .navbar-open{
     left: 0;
 }
@@ -287,27 +284,6 @@ h1{
     align-items: center;
 }
 .content{display: none;}
-
-
-html.lenis {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
 
 footer{
     justify-content: center;

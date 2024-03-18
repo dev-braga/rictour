@@ -266,9 +266,6 @@
     }
 
     /* --- Navbar --- */
-    .navbar{
-        overflow-y: hidden;
-    }
     .navbar-brand{
         position: unset;
     }
