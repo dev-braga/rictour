@@ -40,16 +40,34 @@ function prevStep(currentStep) {
 function validateEmail() {
   var emailInput = document.getElementById('email');
   var emailError = document.getElementById('emailError');
-  var email = emailInput.value;
+  var email = emailInput.value.trim();
 
-  if (!email.includes('@')) {
+  // Expressão regular para validar o formato do e-mail
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
     emailError.textContent = "Por favor, insira um endereço de e-mail válido.";
-    emailInput.setCustomValidity(''); // Invalida o campo para impedir o envio do formulário
+    emailInput.focus(); // Coloca o foco de volta no campo de e-mail
+    return false; // Impede o envio do formulário
   } else {
     emailError.textContent = "";
-    emailInput.setCustomValidity('valid'); // Define o campo como válido
+    return true; // Permite o envio do formulário se o e-mail for válido
   }
 }
+
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
+}
+
 
 function handleTripOptions() {
   var roundTripCheckbox = document.getElementById('roundTrip');
@@ -68,26 +86,25 @@ function handleTripOptions() {
 }
 
 function calculate() {
+  
   var personalInfoForm = document.getElementById("personalInfoForm");
   var travelInfoForm = document.getElementById("travelInfoForm");
+  // Coletar informações pessoais
+  var fullName = personalInfoForm.elements["fullName"].value;
+  var email = personalInfoForm.elements["email"].value;
+  var whatsapp = personalInfoForm.elements["whatsapp"].value;
+  var serviceType = personalInfoForm.elements["serviceType"].value;
 
-  if (personalInfoForm.checkValidity() && travelInfoForm.checkValidity()) {
-    // Coletar informações pessoais
-    var fullName = personalInfoForm.elements["fullName"].value;
-    var email = personalInfoForm.elements["email"].value;
-    var whatsapp = personalInfoForm.elements["whatsapp"].value;
-    var serviceType = personalInfoForm.elements["serviceType"].value;
-
-    // Coletar informações da viagem
-    var numberOfAdults = travelInfoForm.elements["numberOfAdults"].value;
-    var numberOfChildren = travelInfoForm.elements["numberOfChildren"].value;
-    var needChildSeat = travelInfoForm.elements["needChildSeat"].checked;
-    var vehicleType = determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat);
-    var roundTrip = travelInfoForm.elements["roundTrip"].checked ? "Ida e Volta" : "Apenas Ida";
-    var departureDate = travelInfoForm.elements["departureDate"].value;
-    var returnDate = travelInfoForm.elements["returnDate"].value;
-    var departureAddress = travelInfoForm.elements["departureAddress"].value;
-    var destinationAddress = travelInfoForm.elements["destinationAddress"].value;
+  // Coletar informações da viagem
+  var numberOfAdults = travelInfoForm.elements["numberOfAdults"].value;
+  var numberOfChildren = travelInfoForm.elements["numberOfChildren"].value;
+  var needChildSeat = travelInfoForm.elements["needChildSeat"].checked;
+  var vehicleType = determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat);
+  var roundTrip = travelInfoForm.elements["roundTrip"].checked ? "Ida e Volta" : "Apenas Ida";
+  var departureDate = travelInfoForm.elements["departureDate"].value;
+  var returnDate = travelInfoForm.elements["returnDate"].value;
+  var departureAddress = travelInfoForm.elements["departureAddress"].value;
+  var destinationAddress = travelInfoForm.elements["destinationAddress"].value;
 
     // Se a opção "Só Ida" estiver marcada, defina a data de retorno como vazia
     if (travelInfoForm.elements["oneWayTrip"].checked) {
@@ -108,20 +125,17 @@ function calculate() {
                   "*Tipo de Viagem:* " + roundTrip + "\n" +
                   "*Data de Partida:* " + departureDate + "\n";
                   if (returnDate !== "") {
-                    message += "*Data de Retorno:* " + returnDate + "\n";
+                    message = "*Data de Retorno:* " + returnDate + "\n";
                   }
-              
+            
                   message += "*Endereço de Partida:* " + departureAddress + "\n" +
                              "*Endereço de Destino:* " + destinationAddress;    
     // URL para enviar mensagem via WhatsApp
     var whatsappURL = "https://api.whatsapp.com/send?phone=" + encodeURIComponent(whatsapp) + "&text=" + encodeURIComponent(message);
 
     // Redirecionar para o WhatsApp
-    window.open(whatsappURL);
-  } else {
-    var errorMessage = document.getElementById("travelInfoError");
-    errorMessage.textContent = "Por favor, preencha todos os campos antes de prosseguir.";
-  }
+
+  window.open(whatsappURL);
 }
 
 function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
@@ -144,6 +158,13 @@ function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
     return "Van (Com Cadeira Infatil)";
     } else {
       return "Van";
+  }
+  else if(totalPassengers > 10){
+    if (needChildSeat) {
+      return "A combinar (com cadeira infantil)";
+    } else {
+      return "A combinar";
+    }
   }
 }
 

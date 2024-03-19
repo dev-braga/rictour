@@ -113,7 +113,7 @@ const abrirModal = (id) => {
     const hotel = slidersHoteis.find(hotel => hotel.id === id);
     
     // Preencher o campo de endereço de partida no modal com o endereço do hotel
-    document.getElementById('departureAddress').value = hotel.titulo;
+    document.getElementById('destinationAddress').value = hotel.titulo;
     
     // Exibir o modal
     $('#modalReserva').modal('show');

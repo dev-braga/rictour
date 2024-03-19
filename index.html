@@ -15,12 +15,16 @@
     <!-- Importação do swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Importação de CSS -->
+    <link rel="shortcut icon" href="./resource/Rictour-Logo.ico" type="image/x-icon">
+    <!-- Alternativa para navegadores que suportam formatos PNG, GIF ou JPG -->
+    <link rel=" icon" href="./resource/Rictour-Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/mediaScreens.css">
     <link rel="stylesheet" href="css/modal.css">
-    <title>Rictour</title>
+    <title>Rictour - Transporte em Salvador, viaje com profissionais!</title>
+    
 </head>
 <body onload="loading()">
 
@@ -33,7 +37,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="./resource/Rictour-Logo.png" alt="" width="120px" >
+          <img src="./resource/Rictour-Logo.png" alt="" width="60px" >
         </a>
         <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" id="navbar-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -511,10 +515,16 @@
                   <label for="email" class="form-label">Email:</label>
                   <input type="email" class="form-control" id="email" name="email" required oninput="validateEmail()">
                   <div class="error-message" id="emailError"></div>
+                  
                 </div>
                 <div class="mb-3">
                   <label for="whatsapp" class="form-label">Número para Contato:</label>
-                  <input type="tel" class="form-control" id="whatsapp" name="whatsapp" pattern="[0-9]{10,11}" required>
+                  <input type="tel" class="form-control" 
+                    id="whatsapp" name="whatsapp" 
+                    maxlength="15"
+                    pattern="[0-9]{10,11}" required
+                    onkeyup="handlePhone(event)"
+                    >
                 </div>
                 <div class="mb-3">
                   <label for="serviceType" class="form-label">Tipo de Serviço:</label>
@@ -536,11 +546,14 @@
             <form class="step" id="travelInfoForm">
                 <div class="mb-3">
                   <label for="numberOfAdults" class="form-label">Quantidade de Adultos:</label>
-                  <input type="number" class="form-control" id="numberOfAdults" name="numberOfAdults" min="1" max="20" required>
+                  <input type="number" 
+                    class="form-control" id="numberOfAdults" 
+                    name="numberOfAdults" min="1" max="20" required>
                 </div>
                 <div class="mb-3">
                   <label for="numberOfChildren" class="form-label">Quantidade de Crianças:</label>
-                  <input type="number" class="form-control" id="numberOfChildren" name="numberOfChildren" min="0" max="20" required>
+                  <input type="number" class="form-control" id="numberOfChildren" 
+                     name="numberOfChildren" min="1"  max="20" required>
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="needChildSeat" name="needChildSeat">
