@@ -1,3 +1,4 @@
+
 // Quando o modal é aberto
 $('#modalReserva').on('show.bs.modal', function () {
   // Adiciona uma classe ao corpo que desativa o overflow
@@ -13,6 +14,7 @@ $('#modalReserva').on('hidden.bs.modal', function () {
 });
 
 function nextStep(currentStep) {
+
   document.getElementById('step' + currentStep).style.display = 'none';
   document.getElementById('step' + (currentStep + 1)).style.display = 'block';
   
@@ -23,6 +25,7 @@ function nextStep(currentStep) {
   if (currentStep === 2) {
     displayReviewInfo(); // Chama a função para exibir as informações de revisão quando o usuário avança para o passo 3
   }
+
 }
 
 function prevStep(currentStep) {
@@ -200,3 +203,63 @@ function toggleReturnDateField() {
     returnDateField.style.display = "block";
   }
 }
+
+// Checando os forms do step 1 
+function checkFieldsAndEnableButton() {
+  const fullNameInput = document.getElementById('fullName');
+  const emailInput = document.getElementById('email');
+  const whatsappInput = document.getElementById('whatsapp');
+  const serviceTypeInput = document.getElementById('serviceType');
+  const btnNext = document.querySelector('.btn-next');
+
+  if (fullNameInput.value !== "" && emailInput.value !== "" && whatsappInput.value !== "" && serviceTypeInput.value !== "") {
+      btnNext.disabled = false;
+  } else {
+      btnNext.disabled = true;
+  }
+}
+// Adiciona um ouvinte de evento de entrada a cada campo de entrada
+const inputs = document.querySelectorAll('input, select');
+inputs.forEach(input => {
+    input.addEventListener('input', checkFieldsAndEnableButton);
+});
+checkFieldsAndEnableButton()
+
+
+// Checando os forms do step 2
+function checkFieldsAndEnableButton2() {
+  const numberOfAdults = document.getElementById('numberOfAdults');
+  const numberOfChildren = document.getElementById('numberOfChildren');
+  const needChildSeat = document.getElementById('needChildSeat');
+  const roundTrip = document.getElementById('roundTrip');
+  const oneWayTrip = document.getElementById('oneWayTrip');
+  const departureDate = document.getElementById('departureDate');
+  const returnDate = document.getElementById('returnDate');
+  const departureAddress = document.getElementById('departureAddress');
+  const destinationAddress = document.getElementById('destinationAddress');
+  const btnNext2 = document.querySelector('.btn-next-2');
+
+  // Verifica se todos os campos estão preenchidos
+  if (numberOfAdults.value !== "" &&
+      numberOfChildren.value !== "" &&
+      needChildSeat.value !== "" &&
+      departureDate.value !== "" &&
+      (roundTrip.checked && returnDate.value !== "" || oneWayTrip.checked) &&
+      departureAddress.value !== "" &&
+      destinationAddress.value !== "") {
+      btnNext2.disabled = false; // Habilita o botão se todos os campos estiverem preenchidos
+  } else {
+      btnNext2.disabled = true; // Desabilita o botão se algum campo estiver vazio
+  }
+}
+
+// Adiciona um ouvinte de evento de entrada a cada campo de entrada
+const inputs2 = document.querySelectorAll('input, select');
+inputs2.forEach(input => {
+  input.addEventListener('input', checkFieldsAndEnableButton2);
+});
+
+// Chama a função para verificar se todos os campos estão preenchidos e habilitar o botão inicialmente
+checkFieldsAndEnableButton2();
+
+

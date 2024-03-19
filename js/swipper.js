@@ -91,7 +91,10 @@ const initSwiper = () => {
 
     slidersServicos.forEach( data => {
         swipperServicos.innerHTML += `
-        <div class="swiper-slide slide-servico rounded-4">
+        <div class="swiper-slide slide-servico rounded-4" 
+        data-bs-toggle="modal" data-bs-target="#modalReserva"
+        onclick="getServicos(${data.id})"
+        >
         <div class="card text-center text-light">
             <div class="card-conteudo-servico">
               <img src="${data.image}" alt="" height="75px">
@@ -112,6 +115,31 @@ const abrirModal = (id) => {
     // Preencher o campo de endereço de partida no modal com o endereço do hotel
     document.getElementById('departureAddress').value = hotel.titulo;
     
+    // Exibir o modal
+    $('#modalReserva').modal('show');
+}
+
+const getServicos = (id) => {
+    
+    // Obter o serviço correspondente ao ID
+    const servico = slidersServicos.find(servico => servico.id === id);
+    
+    // Preencher o campo de Tipo de Serviço no modal com o título do serviço
+    const selectElement = document.querySelector("#serviceType")
+
+    if( selectElement ){
+        document.querySelector('#serviceType').value = servico.titulo;
+        for (let i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].value === servico.titulo) {
+                selectElement.selectedIndex = i;
+                break;
+            }
+        }
+    }else{
+        console.log("Elemento Nao encontrado.")
+    }
+    
+
     // Exibir o modal
     $('#modalReserva').modal('show');
 }

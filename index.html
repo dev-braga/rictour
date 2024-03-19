@@ -485,7 +485,7 @@
 
       <!-- Modal -->
 <div class="modal fade" id="modalReserva" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalToggleLabel">Formulário de Reserva</h5>
@@ -527,7 +527,7 @@
                   </select>                    
                 </div>
                 <div class="error-message" id="personalInfoError"></div>
-                <button type="button" class="btn btn-primary" onclick="nextStep(1)">Próximo</button>
+                <button type="button" class="btn btn-primary btn-next" onclick="nextStep(1)">Próximo</button>
             </form>
         </div>
 
@@ -573,7 +573,7 @@
                 </div>
                 <div class="error-message" id="travelInfoError"></div>
                 <button type="button" class="btn btn-primary" onclick="prevStep(2)">Voltar</button>
-                <button type="button" class="btn btn-primary" onclick="nextStep(2)">Próximo</button>
+                <button type="button" class="btn btn-primary btn-next-2" onclick="nextStep(2)">Próximo</button>
             </form>
         </div>
         
@@ -588,7 +588,7 @@
             <hr>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="button" class="btn btn-secondary me-md-2" onclick="prevStep(3)">Voltar</button>
-              <button type="button" class="btn btn-primary" onclick="calculate()">Enviar</button>
+              <button type="button" class="btn btn-primary btn-next-3" onclick="calculate()">Enviar</button>
             </div>
           </div>
         </div>
@@ -611,6 +611,7 @@
   </div>
 <!-- Importações JavaScript -->
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
