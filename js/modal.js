@@ -28,6 +28,7 @@ function nextStep(currentStep) {
 
 }
 
+
 function prevStep(currentStep) {
   document.getElementById('step' + currentStep).style.display = 'none';
   document.getElementById('step' + (currentStep - 1)).style.display = 'block';
@@ -68,6 +69,23 @@ const phoneMask = (value) => {
   return value
 }
 
+// Validando os campos numericos
+const numberOfAdultsInput = document.getElementById('numberOfAdults');
+const numberOfChildrenInput = document.getElementById('numberOfChildren');
+
+numberOfAdultsInput.addEventListener('change', function() {
+  // Verifica se o valor excede o máximo
+  if (parseInt(numberOfAdultsInput.value) > parseInt(numberOfAdultsInput.max)) {
+    numberOfAdultsInput.value = numberOfAdultsInput.max;
+  }
+});
+
+numberOfChildrenInput.addEventListener('change', function() {
+  // Verifica se o valor excede o máximo
+  if (parseInt(numberOfChildrenInput.value) > parseInt(numberOfChildrenInput.max)) {
+    numberOfChildrenInput.value = numberOfChildrenInput.max;
+  }
+});
 
 function handleTripOptions() {
   var roundTripCheckbox = document.getElementById('roundTrip');

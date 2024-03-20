@@ -28,7 +28,7 @@ const slidersHoteis = [
     },
     {
         "id": 4,
-        "image": "https://lh3.googleusercontent.com/p/AF1QipPN0eX_9GenhblNsDG1Y8y_PwF2ChZiABS8hTHA=s680-w680-h510",
+        "image": "https://www.puntacanaadventures.com/wp-content/uploads/2022/05/Grand-Palladium-Palace-Excursions.jpeg",
         "titulo": "Hotel Grand Palladium",
         "descricao": "O Grand Palladium Imbassaí Resort & Spa fica a apenas 60 km de Salvador e 45 km do aeroporto, sendo de fácil acesso." 
     }

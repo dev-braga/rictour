@@ -433,13 +433,13 @@
 
           <div class="col-lg-3 mb-3">
             <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
-              <img src="./resource/Rictour-Logo.png" alt="logo" width="180px">
+              <img src="./resource/Rictour-Logo.png" alt="logo" width="60px">
             </a>
             <ul class="list-unstyled">
               <li class="ps-4"><a href="https://github.com/dev-braga"> Dev Solutions </a></li>
               <li class="ps-4"><b>Satisfação em servir, felicidade em trabalhar.</b></li>
               <li class="ps-4">CNPJ: 20.880.072/0001-88</li>
-              <li class="ps-4">Atualmente v1.0</li>
+              <li class="ps-4">Versão atual v1.0</li>
             </ul>
           </div>
 
@@ -509,17 +509,19 @@
             <form class="step" id="personalInfoForm">
                 <div class="mb-3">
                   <label for="fullName" class="form-label">Nome Completo:</label>
-                  <input type="text" class="form-control" id="fullName" name="fullName" required>
+                  <input type="text" placeholder="Ex: João Paulo" class="form-control" id="fullName" name="fullName" required>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email:</label>
-                  <input type="email" class="form-control" id="email" name="email" required oninput="validateEmail()">
+                  <input type="email" placeholder="Ex: meuemail@email.com" class="form-control" id="email" name="email" required oninput="validateEmail()">
                   <div class="error-message" id="emailError"></div>
                   
                 </div>
                 <div class="mb-3">
                   <label for="whatsapp" class="form-label">Número para Contato:</label>
-                  <input type="tel" class="form-control" 
+                  <input type="tel" 
+                    placeholder="(00) 00000-0000"
+                    class="form-control" 
                     id="whatsapp" name="whatsapp" 
                     maxlength="15"
                     pattern="[0-9]{10,11}" required
@@ -547,12 +549,16 @@
                 <div class="mb-3">
                   <label for="numberOfAdults" class="form-label">Quantidade de Adultos:</label>
                   <input type="number" 
+                    placeholder="Maximo 20"
                     class="form-control" id="numberOfAdults" 
                     name="numberOfAdults" min="1" max="20" required>
                 </div>
                 <div class="mb-3">
                   <label for="numberOfChildren" class="form-label">Quantidade de Crianças:</label>
-                  <input type="number" class="form-control" id="numberOfChildren" 
+                  <input 
+                  placeholder="Maximo 20"
+                    type="number" 
+                    class="form-control" id="numberOfChildren" 
                      name="numberOfChildren" min="1"  max="20" required>
                 </div>
                 <div class="mb-3 form-check">
@@ -578,10 +584,10 @@
                 </div>
                 <div class="mb-3">
                   <label for="departureAddress" class="form-label">Endereço de Partida:</label>
-                  <input type="text" class="form-control" id="departureAddress" name="departureAddress" required>
+                  <input type="text" placeholder="Digite seu endereço aqui." class="form-control" id="departureAddress" name="departureAddress" required>
                 </div>
                 <div class="mb-3">
-                  <label for="destinationAddress" class="form-label">Endereço de Destino:</label>
+                  <label for="destinationAddress" placeholder="Digite seu endereço aqui." class="form-label">Endereço de Destino:</label>
                   <input type="text" class="form-control" id="destinationAddress" name="destinationAddress" required>
                 </div>
                 <div class="error-message" id="travelInfoError"></div>
