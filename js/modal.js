@@ -11,6 +11,7 @@ $('#modalReserva').on('hidden.bs.modal', function () {
   // Remove a classe do corpo que desativa o overflow
   $('body').removeClass('modal-open-no-scroll');
   $('body').removeClass('navbar-collapsed-menu');
+
 });
 
 function nextStep(currentStep) {
@@ -130,12 +131,12 @@ function calculate() {
     }
 
     // Criar a mensagem para enviar via WhatsApp
-    var message = "*Olá! Segue abaixo as informações da viagem:\n\n*" +
+    var message = "*Olá! Segue abaixo as informações da viagem:*\n\n" +
                   "*Nome Completo:* " + fullName + "\n" +
                   "*Email:* " + email + "\n" +
                   "*WhatsApp:* " + whatsapp + "\n\n" +
                   "*Tipo de Serviço:* " + serviceType + "\n\n" +
-                  "*Informações da Viagem:\n*" +
+                  "*Informações da Viagem:*\n" +
                   "*Quantidade de Adultos:* " + numberOfAdults + "\n" +
                   "*Quantidade de Crianças:* " + numberOfChildren + "\n" +
                   "*Necessita de Cadeira Infantil:* " + (needChildSeat ? "Sim" : "Não") + "\n" +
@@ -149,7 +150,7 @@ function calculate() {
                   message += "*Endereço de Partida:* " + departureAddress + "\n" +
                              "*Endereço de Destino:* " + destinationAddress;    
     // URL para enviar mensagem via WhatsApp
-    var whatsappURL = "https://api.whatsapp.com/send?phone=" + encodeURIComponent(whatsapp) + "&text=" + encodeURIComponent(message);
+    var whatsappURL = "https://api.whatsapp.com/send?phone=5571981459595" + "&text=" + encodeURIComponent(message);
 
     // Redirecionar para o WhatsApp
 
@@ -300,5 +301,47 @@ inputs2.forEach(input => {
 
 // Chama a função para verificar se todos os campos estão preenchidos e habilitar o botão inicialmente
 checkFieldsAndEnableButton2();
+
+// Função para limpar os campos de preenchimento
+function clearEraseDate() {
+  // Limpa os campos do formulário de informações pessoais
+  document.getElementById('fullName').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('whatsapp').value = '';
+  document.getElementById('serviceType').value = '';
+
+  // Limpa os campos do formulário de informações de viagem
+  document.getElementById('numberOfAdults').value = '';
+  document.getElementById('numberOfChildren').value = '';
+  document.getElementById('needChildSeat').checked = false;
+  document.getElementById('roundTrip').checked = false;
+  document.getElementById('oneWayTrip').checked = false;
+  document.getElementById('departureDate').value = '';
+  document.getElementById('returnDate').value = '';
+  document.getElementById('departureAddress').value = '';
+  document.getElementById('destinationAddress').value = '';
+
+
+  document.getElementById("reviewInfo").innerHTML = "";
+  
+  // Habilita os botões novamente
+  document.querySelector('.btn-next').disabled = true;
+  document.querySelector('.btn-next-2').disabled = true;
+}
+
+// Quando o modal é fechado
+$('#modalReserva').on('hidden.bs.modal', function () {
+  // Remove a classe do corpo que desativa o overflow
+  $('body').removeClass('modal-open-no-scroll');
+  $('body').removeClass('navbar-collapsed-menu');
+
+  // Limpa os campos do formulário
+  clearFormFields();
+
+  // Volta para o primeiro modal
+  $('#modalReserva').modal('hide'); // Fecha o modal atual
+  $('#modalReserva').modal('show'); // Mostra o primeiro modal novamente
+});
+
 
 

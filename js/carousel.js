@@ -123,4 +123,30 @@ var swiperHotel = new Swiper('.swiper-depoimentos', {
         nextEl: '.swiper-button-next-depoimentos',
         prevEl: '.swiper-button-prev-depoimentos' 
     }
+    
+});
+
+var swiperPasseio = new Swiper('.container-passeios', {
+    slidesPerView: '1',
+    spaceBetween: 10,
+    autoHeight: true,
+    breakpoints:{
+        469:{
+            slidesPerView: 1
+        },
+        640:{
+            slidesPerView: 1
+        },
+        912:{
+            slidesPerView: 2
+        },
+        1270:{
+            slidesPerView: 3
+        },
+    },
+    navigation:{
+        nextEl: '.swiper-button-next-passeios',
+        prevEl: '.swiper-button-prev-passeios' 
+    }
+    
 });

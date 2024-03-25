@@ -63,6 +63,43 @@
     cursor: pointer;
     z-index: 10;
 }
+
+.slide-passeios:hover{
+    cursor: pointer;
+}
+
+.container-passeios{
+    position: relative;
+    width: 90%;
+    height: 410px;
+    margin: 0 auto;
+}
+.card-conteudo-passeio{
+    padding-top: 6.2rem;
+    padding-bottom: 1.2rem;
+}
+.container-slide-passeios{
+    margin-left: 0;
+}
+.swiper-button-prev-passeios,
+.swiper-button-next-passeios{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(150, 150, 150, 0.308);
+    border-radius: 50%;
+    color: #fff;
+    --swiper-navigation-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
 .swiper-destinos{
     position: relative;
     margin: 0 auto;
@@ -98,6 +135,12 @@
     margin-top: 2px;
     filter: brightness(0.7);
 }
+
+.slide-passeio .card-img{
+    margin-top: 2px;
+    filter: brightness(0.5);
+
+}
 .card{
     border-radius: 40px;
     transition: transform 0.3s;
@@ -123,6 +166,7 @@
     padding-bottom: 1.2rem;
     background-color: #00000088;
 }
+
 .card-img-overlay{
     text-align: left;
 }
