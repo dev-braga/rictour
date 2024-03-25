@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
 // Quando o modal é aberto
 $('#modalReserva').on('show.bs.modal', function () {
   // Adiciona uma classe ao corpo que desativa o overflow
@@ -11,11 +14,17 @@ $('#modalReserva').on('hidden.bs.modal', function () {
   // Remove a classe do corpo que desativa o overflow
   $('body').removeClass('modal-open-no-scroll');
   $('body').removeClass('navbar-collapsed-menu');
+<<<<<<< HEAD
 
 });
 
 function nextStep(currentStep) {
 
+=======
+});
+
+function nextStep(currentStep) {
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
   document.getElementById('step' + currentStep).style.display = 'none';
   document.getElementById('step' + (currentStep + 1)).style.display = 'block';
   
@@ -26,7 +35,10 @@ function nextStep(currentStep) {
   if (currentStep === 2) {
     displayReviewInfo(); // Chama a função para exibir as informações de revisão quando o usuário avança para o passo 3
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
 }
 
 
@@ -108,11 +120,21 @@ function calculate() {
   
   var personalInfoForm = document.getElementById("personalInfoForm");
   var travelInfoForm = document.getElementById("travelInfoForm");
+<<<<<<< HEAD
   // Coletar informações pessoais
   var fullName = personalInfoForm.elements["fullName"].value;
   var email = personalInfoForm.elements["email"].value;
   var whatsapp = personalInfoForm.elements["whatsapp"].value;
   var serviceType = personalInfoForm.elements["serviceType"].value;
+=======
+
+  if (personalInfoForm.checkValidity() && travelInfoForm.checkValidity()) {
+    // Coletar informações pessoais
+    var fullName = personalInfoForm.elements["fullName"].value;
+    var email = personalInfoForm.elements["email"].value;
+    var whatsapp = personalInfoForm.elements["whatsapp"].value;
+    var serviceType = personalInfoForm.elements["serviceType"].value;
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
 
   // Coletar informações da viagem
   var numberOfAdults = travelInfoForm.elements["numberOfAdults"].value;
@@ -131,12 +153,20 @@ function calculate() {
     }
 
     // Criar a mensagem para enviar via WhatsApp
+<<<<<<< HEAD
     var message = "*Olá! Segue abaixo as informações da viagem:*\n\n" +
+=======
+    var message = "*Olá! Segue abaixo as informações da viagem:\n\n*" +
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                   "*Nome Completo:* " + fullName + "\n" +
                   "*Email:* " + email + "\n" +
                   "*WhatsApp:* " + whatsapp + "\n\n" +
                   "*Tipo de Serviço:* " + serviceType + "\n\n" +
+<<<<<<< HEAD
                   "*Informações da Viagem:*\n" +
+=======
+                  "*Informações da Viagem:\n*" +
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                   "*Quantidade de Adultos:* " + numberOfAdults + "\n" +
                   "*Quantidade de Crianças:* " + numberOfChildren + "\n" +
                   "*Necessita de Cadeira Infantil:* " + (needChildSeat ? "Sim" : "Não") + "\n" +
@@ -144,17 +174,31 @@ function calculate() {
                   "*Tipo de Viagem:* " + roundTrip + "\n" +
                   "*Data de Partida:* " + departureDate + "\n";
                   if (returnDate !== "") {
+<<<<<<< HEAD
                     message = "*Data de Retorno:* " + returnDate + "\n";
                   }
             
+=======
+                    message += "*Data de Retorno:* " + returnDate + "\n";
+                  }
+              
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                   message += "*Endereço de Partida:* " + departureAddress + "\n" +
                              "*Endereço de Destino:* " + destinationAddress;    
     // URL para enviar mensagem via WhatsApp
     var whatsappURL = "https://api.whatsapp.com/send?phone=5571981459595" + "&text=" + encodeURIComponent(message);
 
     // Redirecionar para o WhatsApp
+<<<<<<< HEAD
 
   window.open(whatsappURL);
+=======
+    window.open(whatsappURL);
+  } else {
+    var errorMessage = document.getElementById("travelInfoError");
+    errorMessage.textContent = "Por favor, preencha todos os campos antes de prosseguir.";
+  }
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
 }
 
 function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
@@ -177,6 +221,7 @@ function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
     return "Van (Com Cadeira Infatil)";
     } else {
       return "Van";
+<<<<<<< HEAD
   }
   else if(totalPassengers > 10){
     if (needChildSeat) {
@@ -184,6 +229,8 @@ function determineVehicleType(numberOfAdults, numberOfChildren, needChildSeat) {
     } else {
       return "A combinar";
     }
+=======
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
   }
 }
 

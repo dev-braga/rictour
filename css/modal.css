@@ -31,7 +31,11 @@
 }
 .step-indicator {
   display: flex;
+<<<<<<< HEAD
   justify-content: space-evenly;
+=======
+  justify-content: space-between;
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
   margin-bottom: 20px;
 }
 
