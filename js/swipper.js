@@ -1,5 +1,6 @@
 const swipperWrapper = document.querySelector('.swipper-w-hotel')
 const swipperServicos = document.querySelector('.wrapper-servicos')
+const swipperPasseios = document.querySelector('.swipper-w-passeios');
 
 const slidersHoteis = [
     {
@@ -65,7 +66,40 @@ const slidersServicos = [
 
 ]
 
+//Slide de Passeios
 
+const slidersPasseios = [
+    {
+        "id": 0,
+        "image": "https://avatars.mds.yandex.net/i?id=a18676fb3de200da25b086c234c2dcff90587f72-9212030-images-thumbs&n=13",
+        "titulo": "City Tour Historico",
+        "descricao": "Conheça o centro histórico da cidade que foi a primeira capital do Brasil. Salvador esconde monumentos e edifícios cheios de história"
+    },
+    {
+        "id": 1,
+        "image": "https://grou.com.br/wp-content/uploads/2020/12/7.jpg",
+        "titulo": "City Tour Panoramico",
+        "descricao": "Contemple as melhores vistas de Salvador em um cômodo passeio panorâmico. Um guia especializado mostrará os pontos mais emblemáticos da capital baiana"
+    },
+    {
+        "id": 2,
+        "image": "https://quantocustaviajar.com/blog/wp-content/uploads/2021/08/ilha-de-itaparica-14.jpg",
+        "titulo": "Ilha de Itaparica",
+        "descricao": "Venha cruzar a Baía de Todos os Santos e passar um dia relaxante na Ilha de Itaparica com este passeio de barco saindo de Salvador. Vistas maravilhosas e natureza em estado puro esperam por você. Você não se arrependerá!"   
+    },
+    {
+        "id": 3,
+        "image": "https://uploads.metropoles.com/wp-content/uploads/2021/02/03164714/ilha-dos-frades-4.jpg",
+        "titulo": "Ilha dos Frades",
+        "descricao": "Venha cruzar a Baía de Todos os Santos e passar um dia relaxante na Ilha dos Frades com este passeio de barco saindo de Salvador. Vistas maravilhosas e natureza em estado puro esperam por você. Você não se arrependerá!"  
+    },
+    {
+        "id": 4,
+        "image": "https://imgmd.net/images/c_limit%2Cw_800/v1/guia/1703827/mangue-seco.jpg",
+        "titulo": "Mange Seco",
+        "descricao": "A praia de Mangue Seco é uma das mais belas praias de Aracaju. Tornou-se palco da novela Tieta do Agreste, e é conhecida por seus passeios de buggy que levam você a conhecer os famosos coqueiros de Romeu e Julieta e morro do caju. Uma experiência de aventura para quem gosta de adrenalina."  
+    }
+];
 
 const initSwiper = () => {
 
@@ -78,8 +112,12 @@ const initSwiper = () => {
                 <div class="card-img-overlay card-conteudo">
                     <h4 class="mt-3"><b>${values.titulo}</b></h4>
                     <p>${values.descricao}</p>
+<<<<<<< HEAD
                     <a href="#" class="btn bg-success text-light" 
                     data-bs-toggle="modal" data-bs-target="#modalReserva"
+=======
+                    <a href="#" class="btn bg-success text-light" data-bs-toggle="modal" data-bs-target="#modalReserva"
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                     onclick="abrirModal(${values.id})"
                     >Reservar</a>
                 </div>
@@ -106,6 +144,21 @@ const initSwiper = () => {
         `
     })
 
+    slidersPasseios.forEach(values => {
+        swipperPasseios.innerHTML += `
+            <div class="swiper-slide slide-passeio" id="${values.id}">
+                <div class="card text-center text-light">
+                    <img src="${values.image}" alt="" height="400px" class="card-img rounded-4">
+                    <div class="card-img-overlay card-conteudo-passeio">
+                        <h4 class="mt-3"><b>${values.titulo}</b></h4>
+                        <p>${values.descricao}</p>
+                        <a href="#" class="btn bg-success text-light" data-bs-toggle="modal" data-bs-target="#modalReserva" onclick="abrirModal(${values.id})">Reservar</a>
+                    </div>
+                </div>
+            </div>`;
+    });
+    
+
 }
 
 const abrirModal = (id) => {
@@ -113,11 +166,16 @@ const abrirModal = (id) => {
     const hotel = slidersHoteis.find(hotel => hotel.id === id);
     
     // Preencher o campo de endereço de partida no modal com o endereço do hotel
+<<<<<<< HEAD
     document.getElementById('destinationAddress').value = hotel.titulo;
+    
+    const passeios = slidersPasseios.find(passeio => passeio.id === id);
+    document.getElementById('destinationAddress').value = passeios.titulo;
     
     // Exibir o modal
     $('#modalReserva').modal('show');
 }
+
 
 const getServicos = (id) => {
     
@@ -144,5 +202,34 @@ const getServicos = (id) => {
     $('#modalReserva').modal('show');
 }
 
+const getPasseio = (id) => {
+    const passeio = slidersPasseios.find(p => p.id === id);
+    
+    // Preencher o campo de Tipo de Serviço no modal com o título do passeio
+    const selectElement = $('#serviceType');
+
+    if (selectElement.length > 0) {
+        $('#serviceType').val(passeio.titulo);
+        selectElement.find('option').filter(function() {
+            return $(this).val() === passeio.titulo;
+        }).prop('selected', true);
+    } else {
+        console.log("Elemento não encontrado.");
+    }
+
+    // Exibir o modal
+    $('#modalReserva').modal('show');
+};
 
 initSwiper()
+
+=======
+    document.getElementById('departureAddress').value = hotel.titulo;
+    
+    // Exibir o modal
+    $('#modalReserva').modal('show');
+}
+
+
+initSwiper()
+

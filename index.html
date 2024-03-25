@@ -49,7 +49,7 @@
           <div class="navbar-container">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#" onclick="fecharMenu()">Início</a>
+              <a class="nav-link" href="#" onclick="fecharMenu()">Início</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#section-destinos" onclick="fecharMenu()">Destinos</a>
@@ -131,6 +131,23 @@
           <div class="swiper-button-prev swiper-button-prev-hotel"></div>
         </div>
       </section>
+
+      <section class="container-slide-passeios container-fluid" id="section-passeios">
+        <h1 class="titulo-passeios pls pt-5 ps-5"><div class="pre-line"></div> Passeios</h1>
+        <p class="descricao-passeios ps-5">Descubra os passeios disponíveis para você explorar.</p>
+        <div class="row">
+            <div class="swiper-container container-passeios mt-5 wrapper-passeios">
+                
+              <div class="swiper-wrapper swipper-w-passeios">
+              
+            
+              </div>
+                <div class="swiper-button-next swiper-button-next-passeios"></div>
+                <div class="swiper-button-prev swiper-button-prev-passeios"></div>
+            </div>
+        </div>
+    </section>
+       
     
       <section class="container-fluid container-destinos pt-3 hidden-animation" id="section-destinos">
         <h1 class="title-destinos hidden-animation pls"><div class="pre-line"></div>Destinos</h1>
@@ -489,11 +506,19 @@
 
       <!-- Modal -->
 <div class="modal fade" id="modalReserva" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<<<<<<< HEAD
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalToggleLabel">Formulário de Reserva</h5>
+        <button type="button" class="btn-close"onclick="clearEraseDate()" data-bs-dismiss="modal" aria-label="Close"></button>
+=======
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Formulário de Reserva</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
       </div>
       <div class="modal-body">
 
@@ -509,6 +534,7 @@
             <form class="step" id="personalInfoForm">
                 <div class="mb-3">
                   <label for="fullName" class="form-label">Nome Completo:</label>
+<<<<<<< HEAD
                   <input type="text" placeholder="Ex: João Paulo" class="form-control" id="fullName" name="fullName" required>
                 </div>
                 <div class="mb-3">
@@ -527,6 +553,18 @@
                     pattern="[0-9]{10,11}" required
                     onkeyup="handlePhone(event)"
                     >
+=======
+                  <input type="text" class="form-control" id="fullName" name="fullName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required oninput="validateEmail()">
+                  <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="whatsapp" class="form-label">Número para Contato:</label>
+                  <input type="tel" class="form-control" id="whatsapp" name="whatsapp" pattern="[0-9]{10,11}" required>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                 </div>
                 <div class="mb-3">
                   <label for="serviceType" class="form-label">Tipo de Serviço:</label>
@@ -539,7 +577,11 @@
                   </select>                    
                 </div>
                 <div class="error-message" id="personalInfoError"></div>
+<<<<<<< HEAD
                 <button type="button" class="btn btn-primary btn-next" onclick="nextStep(1)">Próximo</button>
+=======
+                <button type="button" class="btn btn-primary" onclick="nextStep(1)">Próximo</button>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
             </form>
         </div>
 
@@ -548,6 +590,7 @@
             <form class="step" id="travelInfoForm">
                 <div class="mb-3">
                   <label for="numberOfAdults" class="form-label">Quantidade de Adultos:</label>
+<<<<<<< HEAD
                   <input type="number" 
                     placeholder="Maximo 20"
                     class="form-control" id="numberOfAdults" 
@@ -560,6 +603,13 @@
                     type="number" 
                     class="form-control" id="numberOfChildren" 
                      name="numberOfChildren" min="1"  max="20" required>
+=======
+                  <input type="number" class="form-control" id="numberOfAdults" name="numberOfAdults" min="1" max="20" required>
+                </div>
+                <div class="mb-3">
+                  <label for="numberOfChildren" class="form-label">Quantidade de Crianças:</label>
+                  <input type="number" class="form-control" id="numberOfChildren" name="numberOfChildren" min="0" max="20" required>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="needChildSeat" name="needChildSeat">
@@ -584,15 +634,26 @@
                 </div>
                 <div class="mb-3">
                   <label for="departureAddress" class="form-label">Endereço de Partida:</label>
+<<<<<<< HEAD
                   <input type="text" placeholder="Digite seu endereço aqui." class="form-control" id="departureAddress" name="departureAddress" required>
                 </div>
                 <div class="mb-3">
                   <label for="destinationAddress" placeholder="Digite seu endereço aqui." class="form-label">Endereço de Destino:</label>
+=======
+                  <input type="text" class="form-control" id="departureAddress" name="departureAddress" required>
+                </div>
+                <div class="mb-3">
+                  <label for="destinationAddress" class="form-label">Endereço de Destino:</label>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
                   <input type="text" class="form-control" id="destinationAddress" name="destinationAddress" required>
                 </div>
                 <div class="error-message" id="travelInfoError"></div>
                 <button type="button" class="btn btn-primary" onclick="prevStep(2)">Voltar</button>
+<<<<<<< HEAD
                 <button type="button" class="btn btn-primary btn-next-2" onclick="nextStep(2)">Próximo</button>
+=======
+                <button type="button" class="btn btn-primary" onclick="nextStep(2)">Próximo</button>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
             </form>
         </div>
         
@@ -607,7 +668,11 @@
             <hr>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="button" class="btn btn-secondary me-md-2" onclick="prevStep(3)">Voltar</button>
+<<<<<<< HEAD
               <button type="button" class="btn btn-primary btn-next-3" onclick="calculate()">Enviar</button>
+=======
+              <button type="button" class="btn btn-primary" onclick="calculate()">Enviar</button>
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
             </div>
           </div>
         </div>

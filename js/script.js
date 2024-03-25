@@ -11,7 +11,11 @@ function fecharMenu() {
         
     }
 
+<<<<<<< HEAD
     document.body.classList.remove('navbar-open');
+=======
+    $('#modalReserva').modal('show');
+>>>>>>> 2bef0115dabc8553cd139f37e50533f7b03a186c
 }
 // Funcao de carregamento de imagens
 function loading(){
